@@ -61,14 +61,14 @@ else {
 }
 
     } else {
-        if(!superUser) { repondre("il n'a pas d'alive pour ce bot") ; return};
+        if(!superUser) { repondre("il n'a pas de North1🔷 pour ce bot") ; return};
 
-      await   repondre("Vous n'avez pas encore enregistrer votre alive , pour ce faire ;\n tapez entrez apres alive votre message et votre lien image ou video dans ce contete : .alive message;lien");
+      await   repondre("Vous n'avez pas encore enregistrer votre North1🔷 , pour ce faire ;\n tapez entrez apres North1🔷 votre message et votre lien image ou video dans ce contete : .North1🔷 message;lien");
          repondre(" je prend mon temps pour t'expliquer ; gars a toi si tu fait faux")
      }
  } else {
 
-    if(!superUser) { repondre ("Seul le proprietaire a le droit de modifier l'alive") ; return};
+    if(!superUser) { repondre ("Seul le proprietaire a le droit de modifier le North1🔷") ; return};
 
   
     const texte = arg.join(' ').split(';')[0];
@@ -76,9 +76,9 @@ else {
 
 
     
-await addOrUpdateDataInAlive(texte , tlien)
+await addOrUpdateDataInNorth1🔷(texte , tlien)
 
-repondre('message alive actualiser avec succes')
+repondre('message North1🔷 actualiser avec succes')
 
 }
     });￼Enter
