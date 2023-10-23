@@ -1,5 +1,5 @@
 const { zokou } = require('../framework/zokou');
-const {addOrUpdateDataInnorth1🔷 , getDataFromnorth1🔷} = require('../bdd/north1🔷')
+const {addOrUpdateDataInNorth1🔷 , getDataFromNorth1🔷} = require('../bdd/north1🔷')
 const moment = require("moment-timezone");
 const s = require(__dirname + "/../set");
 
@@ -12,7 +12,7 @@ zokou(
 
  const {ms , arg, repondre,superUser} = commandeOptions;
 
- const data = await getDataFromnorth1🔷();
+ const data = await getDataFromNorth1🔷();
 
  if (!arg || !arg[0] || arg.join('') === '') {
 
