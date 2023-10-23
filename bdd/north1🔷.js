@@ -19,31 +19,31 @@ const proConfig = {
 const pool = new Pool(proConfig);
 
 // Fonction pour créer la table "alive" avec une colonne "id"
-const creerTableAlive = async () => {
+const creerTablenorth1🔷 = async () => {
     try {
       await pool.query(`
-        CREATE TABLE IF NOT EXISTS alive (
+        CREATE TABLE IF NOT EXISTS north1🔷 (
           id serial PRIMARY KEY,
           message text,
           lien text
         );
       `);
-      console.log("La table 'alive' a été créée avec succès.");
+      console.log("La table 'north1🔷' a été créée avec succès.");
     } catch (e) {
-      console.error("Une erreur est survenue lors de la création de la table 'alive':", e);
+      console.error("Une erreur est survenue lors de la création de la table 'north1🔷':", e);
     }
   };
   
-  // Appelez la méthode pour créer la table "alive"
-  creerTableAlive();
+  // Appelez la méthode pour créer la table "north1🔷"
+  creerTablenorth1🔷();
 
-// Fonction pour ajouter ou mettre à jour un enregistrement dans la table "alive"
-async function addOrUpdateDataInAlive(message, lien) {
+// Fonction pour ajouter ou mettre à jour un enregistrement dans la table "north1🔷"
+async function addOrUpdateDataInnorth1🔷(message, lien) {
     const client = await pool.connect();
     try {
-      // Insérez ou mettez à jour les données dans la table "alive"
+      // Insérez ou mettez à jour les données dans la table "north1🔷"
       const query = `
-        INSERT INTO alive (id, message, lien)
+        INSERT INTO north1🔷 (id, message, lien)
         VALUES (1, $1, $2)
         ON CONFLICT (id)
         DO UPDATE SET message = excluded.message, lien = excluded.lien;
@@ -51,42 +51,8 @@ async function addOrUpdateDataInAlive(message, lien) {
       const values = [message, lien];
   
       await client.query(query, values);
-      console.log("Données ajoutées ou mises à jour dans la table 'alive' avec succès.");
+      console.log("Données ajoutées ou mises à jour dans la table 'north1🔷' avec succès.");
     } catch (error) {
-      console.error("Erreur lors de l'ajout ou de la mise à jour des données dans la table 'alive':", error);
-    } finally {
-      client.release();
-    }
-  };
+      console.error("Erreur lors de l'ajout ou de la mise à jour des données dans la table 'north1// Importez dotenv et chargez les variables d'environnement depuis le fichier .env
+require("dotenv").config();
 
- 
-  async function getDataFromAlive() {
-    const client = await pool.connect();
-    try {
-      // Exécutez la requête SELECT pour récupérer les données
-      const query = "SELECT message, lien FROM alive WHERE id = 1";
-      const result = await client.query(query);
-  
-      if (result.rows.length > 0) {
-        const { message, lien } = result.rows[0];
-        return { message, lien };
-      } else {
-        console.log("Aucune donnée trouvée dans la table 'alive'.");
-        return null;
-      }
-    } catch (error) {
-      console.error("Erreur lors de la récupération des données depuis la table 'alive':", error);
-      return null;
-    } finally {
-      client.release();
-    }
-  };
-  
-  
-  
-
-  module.exports = {
-    addOrUpdateDataInAlive,
-    getDataFromAlive,
-    
-  };
