@@ -54,7 +54,7 @@ _*En cours de téléchargement...*_\n\n`
           timeout: 30000 // 30 secondes
         });
 
-        if (choix.message.conversation == 1 || choix.message.message.extendedTextMessage.text == 1) {
+        if (choix.message.conversation == 1 || choix.message.extendedTextMessage.text == 1) {
           zk.sendMessage(origineMessage, { audio: { url: "audio.mp3" }, mimetype: 'audio/mp4' }, { quoted: ms, ptt: false });
           console.log("Envoi du fichier audio terminé !");
         } else {
