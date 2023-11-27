@@ -106,10 +106,10 @@ zokou({
   categorie: "Recherche",
   reaction: "🎥"
 }, async (origineMessage, zk, commandeOptions) => {
-  const { arg, ms, repondre } = commandeOptions;
+  const { arg, ms, repondre, auteurMessage } = commandeOptions;
 
   if (!arg[0]) {
-    repondre("Veillez entrer un terme de recherche s'il vous plaît");
+    repondre("Veuillez entrer un terme de recherche s'il vous plaît.");
     return;
   }
 
@@ -123,13 +123,25 @@ zokou({
 
       let InfoMess = {
         image: { url: videos[0].thumbnail },
-        caption: `*nom de la vidéo :* _${Element.title}_
+        caption: `*Nom de la vidéo :* _${Element.title}_
 *Durée :* _${Element.timestamp}_
 *Lien :* _${Element.url}_
-_*En cours de téléchargement...*_\n\n`
+_*En cours de téléchargement...*_\n\n Veillez entrez:
+
+*1* : pour télécharger la vidéo en 
+*2* : pour télécharger la vidéo en fichier doc
+\n\n`
       };
 
       zk.sendMessage(origineMessage, InfoMess, { quoted: ms });
+
+      let choix = await zk.awaitForMessage({
+        sender: auteurMessage,
+        chatJid: origineMessage,
+        timeout: 30000, // 30 secondes
+      });
+
+      repondre("Téléchargement de la vidéo en cours");
 
       const videoInfo = await ytdl.getInfo(Element.url);
       const format = ytdl.chooseFormat(videoInfo.formats, { quality: '18' });
@@ -140,8 +152,32 @@ _*En cours de téléchargement...*_\n\n`
 
       videoStream.pipe(fileStream);
 
-      fileStream.on('finish', () => {
-        zk.sendMessage(origineMessage, { video: { url: "./video.mp4" }, caption: "*Zokou-Md", gifPlayback: false }, { quoted: ms });
+      fileStream.on('finish', async () => {
+        let indice;
+        try { indice = choix.message.extendedTextMessage.text } catch { indice = choix.message.conversation }
+
+        if (indice == 1) {
+          zk.sendMessage(origineMessage, { video: { url: "./video.mp4" }, caption: "*Zokou-MD", gifPlayback: false }, { quoted: ms });
+          console.log("Envoi du fichier vidéo terminé !");
+        } else if (indice == 2) {
+          let buttonMessage = {
+            document: fs.readFileSync(`./video.mp4`),
+            mimetype: 'video/mp4',
+            fileName: Element.title + ".mp4",
+            headerType: 4,
+            contextInfo: {
+              externalAdReply: {
+                title: Element.title,
+                body: `by zokou-MD for you`,
+                renderLargerThumbnail: true,
+                thumbnailUrl: Element.thumbnail,
+                mediaUrl: Element.url,
+                mediaType: 2,
+              },
+            },
+          };
+          zk.sendMessage(origineMessage, buttonMessage, { quoted: ms });
+        }
       });
 
       fileStream.on('error', (error) => {
@@ -152,7 +188,11 @@ _*En cours de téléchargement...*_\n\n`
       repondre('Aucune vidéo trouvée.');
     }
   } catch (error) {
-    console.error('Erreur lors de la recherche ou du téléchargement de la vidéo :', error);
-    repondre('Une erreur est survenue lors de la recherche ou du téléchargement de la vidéo.');
+    if (error.name == 'Timeout') {
+      return;
+    } else {
+      console.error('Erreur lors de la recherche ou du téléchargement de la vidéo :', error);
+      repondre('Une erreur est survenue lors de la recherche ou du téléchargement de la vidéo.');
+    }
   }
 });
