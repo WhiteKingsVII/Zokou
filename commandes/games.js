@@ -1,4 +1,5 @@
 const {zokou} = require("../framework/zokou");
+const axios = require('axios');
 
 
 
@@ -132,3 +133,76 @@ Par consequent , le jeu est annuler`, mentions : [auteurMessage, auteurMsgRepond
         }
     }
 });
+
+
+zokou(
+    { nomCom: "quizz", categorie: "Games", reaction: "👨🏿‍💻" },
+    async (origineMessage, zk, commandeOptions) => {
+        const { repondre, auteurMessage } = commandeOptions;
+
+        try {
+         let quizz = await axios.get("https://quizzapi.jomoreschi.fr/api/v1/quiz?limit=1&difficulty=facile") ;
+
+         
+   let msg = `     Zokou-Quizz-Games
+
+*Categorie :* ${quizz.data.quizzes[0].category}
+*Question :* ${quizz.data.quizzes[0].question}\n\n*Propositon de reponses :*\n`
+    
+let Answers =[] ;
+       for (const reponse of quizz.data.quizzes[0].badAnswers) {
+        
+         Answers.push(reponse)
+     
+       } ;
+
+       Answers.push(quizz.data.quizzes[0].answer) ;
+    
+      async function shuffleArray(array) {
+        const shuffledArray = array.slice(); // Copie du tableau d'origine
+      
+        for (let i = shuffledArray.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
+        }
+      
+        return shuffledArray;
+      } ;
+ 
+ let choix = await shuffleArray(Answers) ;
+
+ for (let i = 0; i < choix.length; i++) {
+    msg += `*${i + 1} :* ${choix[i]}\n`;
+}
+
+
+     msg+= `
+Entrez le chiffre de votre choix`
+             
+       repondre(msg) ;
+
+       let rep = await  zk.awaitForMessage({
+        sender: auteurMessage,
+        chatJid : origineMessage,
+        timeout: 15000 // 30 secondes
+    });
+   let repse ;  
+    try {
+        repse = rep.message.extendedTextMessage.text
+    } catch {
+        repse = rep.message.conversation
+    } ;
+
+    if (choix[repse - 1 ] == quizz.data.quizzes[0].answer ) {
+
+        reponse("Bravo vous avez trouvez la bonne reponse ;")
+    } else {
+
+        repondre("Erreur fin du quizz")
+    }
+
+        } catch (error) {
+            console.log(error);
+        }
+    }
+);
