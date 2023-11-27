@@ -63,7 +63,7 @@ zokou({
         if ( indice  == 1) {
           zk.sendMessage(origineMessage, { audio: { url: "audio.mp3" }, mimetype: 'audio/mp4' }, { quoted: ms, ptt: false });
           console.log("Envoi du fichier audio terminé !");
-        } else {
+        } else if (indice == 2) {
           let buttonMessage = {
             document: fs.readFileSync(`./audio.mp3`),
             mimetype: 'audio/mpeg',
@@ -92,8 +92,12 @@ zokou({
       repondre('Aucune vidéo trouvée.');
     }
   } catch (error) {
+     if (error.name == 'Timeout' ) {
+       return ;
+     } else {
     console.error('Erreur lors de la recherche ou du téléchargement de la vidéo :', error);
     repondre('Une erreur est survenue lors de la recherche ou du téléchargement de la vidéo.');
+     }
   }
 });
 
