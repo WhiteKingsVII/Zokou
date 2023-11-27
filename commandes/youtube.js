@@ -34,11 +34,21 @@ zokou({
 
 *Lien :* _${videos[0].url}_
 
-_*En cours de téléchargement...*_\n\n`
+ Veillez entrez:
+
+*1* : pour  avoir le song en audio
+*2* : pour avoir le song en fichier doc
+\n\n`
       };
 
       zk.sendMessage(origineMessage, infoMess, { quoted: ms });
 
+       let choix = await zk.awaitForMessage({
+          sender: auteurMessage,
+          chatJid: origineMessage,
+          timeout: 30000, // 30 secondes
+        });
+       repondre("Telechargement de l'audio en cours");
       const audioStream = ytdl(urlElement, { filter: 'audioonly', quality: 'highestaudio' });
       const filename = 'audio.mp3';
       const fileStream = fs.createWriteStream(filename);
@@ -46,15 +56,11 @@ _*En cours de téléchargement...*_\n\n`
       audioStream.pipe(fileStream);
 
       fileStream.on('finish', async () => {
-        repondre("entrez 1 pour avoir en audio ; entrez 2 pour l'avoir en fichier doc");
+    let indice ;   
+     try { indice = choix.message.extendedTextMessage.text } catch { indice = choix.message.conversation }
+       
 
-        let choix = await zk.awaitForMessage({
-          sender: auteurMessage,
-          chatJid: origineMessage,
-          timeout: 30000 // 30 secondes
-        });
-
-        if (choix.message.conversation == 1 || choix.message.extendedTextMessage.text == 1) {
+        if ( indice  == 1) {
           zk.sendMessage(origineMessage, { audio: { url: "audio.mp3" }, mimetype: 'audio/mp4' }, { quoted: ms, ptt: false });
           console.log("Envoi du fichier audio terminé !");
         } else {
@@ -66,7 +72,7 @@ _*En cours de téléchargement...*_\n\n`
             contextInfo: {
               externalAdReply: {
                 title: videos[0].title,
-                body: auteurMessage,
+                body: `by zokou-MD for you`,
                 renderLargerThumbnail: true,
                 thumbnailUrl: videos[0].thumbnail,
                 mediaUrl: videos[0].url,
