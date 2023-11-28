@@ -195,7 +195,7 @@ Entrez le chiffre de votre choix`
 
     if (choix[repse - 1 ] == quizz.data.quizzes[0].answer ) {
 
-        reponse("Bravo vous avez trouvez la bonne reponse ;")
+        repondre("Bravo vous avez trouvez la bonne reponse ;")
     } else {
 
         repondre("Erreur fin du quizz")
