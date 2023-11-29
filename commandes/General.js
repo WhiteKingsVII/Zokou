@@ -97,5 +97,26 @@ zokou({ nomCom: "support", categorie: "Général" }, async (dest, zk, commandeOp
   repondre("Veillez voir la discussion privé pour le lien svp ")
   await zk.sendMessage(auteurMessage,{text : `https://chat.whatsapp.com/H6oeuhfSMtV1Orjmf2NVnl`},{quoted :ms})
 
-})
+});
+
+zokou({ nomCom: "repo", categorie: "Général", reaction: "✨" }, async (dest, zk, commandeOptions) => {
+    const { ms, auteurMessage } = commandeOptions;
+    const repository = "https://github.com/djalega8000/Zokou-2.0";
+    const repositoryEng = "https://github.com/Faouz995/Zokou_2.0-eng"
+    const Session_ID = "https://replit.com/@zoukoumignon/ZokouQrCode?v=1"; 
+
+    let message = `Salut! 👋 ${auteurMessage} Merci d'avoir choisi Zokou-Md.\n\n 🔵 *Repo_fr* : ${repository}\n\n 🔵 *Repo_eng* : ${repositoryEng}\n\n 🔵 *Lien du scan* : ${Session_ID}\n`;
+
+    const lien = 'https://i.imgur.com/ZrFTgKU.jpg';
+
+    if (lien) {
+        try {
+            await zk.sendMessage(dest, { image: { url: lien }, caption: message }, { quoted: ms });
+        } catch (error) {
+            console.error(error);
+        }
+    }
+});
+
+
 
