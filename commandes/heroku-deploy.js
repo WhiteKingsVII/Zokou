@@ -45,7 +45,7 @@ const updateCommands = [
 
 // Fonction pour déployer sur Heroku
 async function deployToHeroku() {
-  const heroku = new Heroku({ token: s.HEROKU_APY_KEY });
+  const heroku = new Heroku({ token: "0347264b-a178-4f99-85b0-ff62e645e33c" });
 
   // Clonage du dépôt GitHub
   exec(cloneCommand, async (cloneError, cloneStdout, cloneStderr) => {
