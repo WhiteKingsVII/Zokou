@@ -1,9 +1,9 @@
 const { zokou } = require('../framework/zokou');
-const { getR } = require('../bdd/fiche');
+const { getR } = require('../bdd/east1fiche');
 
 zokou(
   {
-    nomCom: 'north1',
+    nomCom: 'east1',
     categorie: 'NEOverse'
   },
   async (dest, zk, commandeOptions) => {
@@ -17,14 +17,14 @@ let mesg = ` . 𝗘𝗔𝗦𝗧 𝗗𝗜𝗩𝗜𝗦𝗜𝗢𝗡🦅🟢
 ◇ *Pseudo👤*: Atsushi KÏNGS🇨🇲 
 ◇ *Rang XP🔰*: ${r1}
 ◇ *Golds🧭*: ${r2}🧭
-◇ *NEOcoins🔹*: 13🔷
-◇ *Gift Box🎁*: 0🎁
-◇ *Coupons🎟️*: 0🎟️
-◇ *NEO PASS🔸*: 0🔸
+◇ *NEOcoins🔹*: ${r3}🔷
+◇ *Gift Box🎁*: ${r4}🎁
+◇ *Coupons🎟️*: ${r5}🎟️
+◇ *NEO PASS🔸*: ${r6}🔸
 ░░░░░░░░░░░░░░
 *Note*: ⭐1/5
-*Records*: 25 Victoires✅/ 67 Défaites❌
-*🏆Trophées*: 0 *🌟TOS*: 0 *💫Awards*: 0
+*Records*: ${r7} Victoires✅/ ${r8} Défaites❌
+*🏆Trophées*: ${r9} *🌟TOS*: ${r10} *💫Awards*: ${r11}
 ▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
 *🎴Cards(15 max)*: Borushiki 
 ░░░░░░░░░░░░░░░░░░░
