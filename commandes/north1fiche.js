@@ -8,13 +8,13 @@ zokou(
   },
   async (dest, zk, commandeOptions) => {
     const { ms, repondre, arg } = commandeOptions;
-
-    try {
-      const data = await getData();
-      let joueur = arg[1];
+    let joueur = arg[1];
       let object = arg[3];
       let signe = arg[4];
       let valeur = arg[5];
+
+    try {
+      const data = await getData();
 
       if (!arg || arg.length === 0) {
         let mesg = `.*𝗡𝗢𝗥𝗧𝗛 𝗗𝗜𝗩𝗜𝗦𝗜𝗢𝗡🐺🔴*
@@ -127,7 +127,7 @@ Records: 0 Victoires✅/ 0 Défaites❌
           const colonneObjet = colonnesJoueur[object];
 
           if (colonneObjet && (signe === '+' || signe === '-')) {
-            const query = `UPDATE north4_che SET ${colonneObjet} = ${colonneObjet} ${signe} ${valeur} WHERE id = 1`;
+            const query = `UPDATE north4_he SET ${colonneObjet} = ${colonneObjet} ${signe} ${valeur} WHERE id = 1`;
             await client.query(query);
 
             console.log(`Données de l'utilisateur ${joueur} mises à jour`);
@@ -142,7 +142,7 @@ Records: 0 Victoires✅/ 0 Défaites❌
         }
 
         if (signe === '=') {
-          const query = `UPDATE north4_che SET ${colonneObjet} = ${valeur} WHERE id = 1`;
+          const query = `UPDATE north4_he SET ${colonneObjet} = ${valeur} WHERE id = 1`;
           await client.query(query);
 
           console.log(`données du joueur: ${joueur} mise a jour`);
