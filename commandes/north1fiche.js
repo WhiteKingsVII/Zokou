@@ -125,32 +125,31 @@ Records: 0 Victoires✅/ 0 Défaites❌
           }
 
           const colonneObjet = colonnesJoueur[object];
+         if (colonneObjet && (signe === '+' || signe === '-')) {
+        const query = `UPDATE north4 SET ${colonneObjet} = ${colonneObjet} ${signe} ${valeur} WHERE id = 1`;
+        await client.query(query);
 
-          if (colonneObjet && (signe === '+' || signe === '-')) {
-            const query = `UPDATE north4 SET ${colonneObjet} = ${colonneObjet} ${signe} ${valeur} WHERE id = 1`;
-            await client.query(query);
+        console.log(`Données de l'utilisateur ${joueur} mises à jour`);
+        repondre(`Données du joueur mises à jour\n👤 *JOUEUR*: ${joueur}\n⚙ *OBJECT*: ${object}\n💵 *VALEUR*: ${signe}${valeur}\n*NOUVEAU SOLDE*: ${data[colonneObjet]}`);
+    } else if (colonneObjet && signe === '=') {
+        const query = `INSERT INTO north4 (${colonneObjet}) VALUES (${valeur}) WHERE id = 1`;
+        await client.query(query);
 
-            console.log(`Données de l'utilisateur ${joueur} mises à jour`);
-            repondre(`Données du joueur mises à jour\n👤 *JOUEUR*: ${joueur}\n⚙ *OBJECT*: ${object}\n💵 *VALEUR*: ${signe}${valeur}\n*NOUVEAU SOLDE*: ${data.[colonneObjet]}`);
-          } else if (colonneObjet && signe === '=') {
-          const query = `INSERT INTO north4 SET(${colonneObjet}) VALUES(${valeur}) WHERE id = 1`;
-          await client.query(query);
-
-          console.log(`données du joueur: ${joueur} mise a jour`);
-          repondre(`Données du joueur mises à jour\n👤 *JOUEUR*: ${joueur}\n⚙ *OBJECT*: ${object}\n💵 *VALEUR*: ${valeur}\n*NOUVELLE CARDS/RANG_XP*: ${data.[colonneObjet]}`);
-        } else if ( arg[0] === 'active') {
-          const query = `UPDATE north4 SET r2 = 0`;
-            await client.query(query); 
-            console.log('base de données activé');
-            repondre('sucess base  de données activé');
-          } else {
-            console.log("Nom d'objet non reconnu ou signe invalide.");
-            repondre(`Une erreur est survenue. Veuillez entrer correctement les données.`);
-        } 
-        } else {
-          console.log("Le message ne correspond pas au format attendu.");
-          repondre(`Le format du message est incorrect.`);
-        }
+        console.log(`données du joueur: ${joueur} mise à jour`);
+        repondre(`Données du joueur mises à jour\n👤 *JOUEUR*: ${joueur}\n⚙ *OBJECT*: ${object}\n💵 *VALEUR*: ${valeur}\n*NOUVELLE CARDS/RANG_XP*: ${data[colonneObjet]}`);
+    } else if (arg[0] === 'active') {
+        const query = `UPDATE north4 SET r2 = 0`;
+        await client.query(query);
+        console.log('base de données activée');
+        repondre('success base de données activée');
+    } else {
+        console.log("Nom d'objet non reconnu ou signe invalide.");
+        repondre(`Une erreur est survenue. Veuillez entrer correctement les données.`);
+    }
+} else {
+    console.log("Le message ne correspond pas au format attendu.");
+    repondre(`Le format du message est incorrect.`);
+} 
 
         client.release();
       }
