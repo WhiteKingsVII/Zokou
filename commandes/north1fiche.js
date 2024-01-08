@@ -133,7 +133,7 @@ Records: 0 Victoires✅/ 0 Défaites❌
             console.log(`Données de l'utilisateur ${joueur} mises à jour`);
             repondre(`Données du joueur mises à jour\n👤 *JOUEUR*: ${joueur}\n⚙ *OBJECT*: ${object}\n💵 *VALEUR*: ${signe}${valeur}\n*NOUVEAU SOLDE*: ${data.[colonneObjet]}`);
           } else if (colonneObjet && signe === '=') {
-          const query = `INSERT INTO north4 SET(${colonneObjet}) VALUE(${valeur}) WHERE id = 1`;
+          const query = `INSERT INTO north4 SET(${colonneObjet}) VALUES(${valeur}) WHERE id = 1`;
           await client.query(query);
 
           console.log(`données du joueur: ${joueur} mise a jour`);
