@@ -16,7 +16,7 @@ async function createNorth1FicheTable() {
   try {
     // Créez la table north4_che si elle n'existe pas déjà
     await client.query(`
-      CREATE TABLE IF NOT EXISTS north4_he(
+      CREATE TABLE IF NOT EXISTS north4_e(
         id SERIAL PRIMARY KEY,
         r1 TEXT DEFAULT 'aucun',
         r2 INTEGER DEFAULT 0,
@@ -56,9 +56,9 @@ async function createNorth1FicheTable() {
         r36 TEXT DEFAULT 'aucun'
       );
     `);
-    console.log('Table north4_che créée avec succès');
+    console.log('Table north4_e créée avec succès');
   } catch (error) {
-    console.error('Erreur lors de la création de la table north4_che:', error);
+    console.error('Erreur lors de la création de la table north4_e:', error);
   } finally {
     client.release();
   }
@@ -67,10 +67,14 @@ async function createNorth1FicheTable() {
 // Fonction pour insérer des données
 async function insertData() {
   const client = await pool.connect();
+const aquery = 'SELECT r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, r13, r14, r15, r16, r17, r18, r19, r20, r21, r22, r23, r24, r25, r26, r27, r28, r29, r30, r31, r32, r33, r34, r35, r36 FROM north4_e WHERE id =1';
+    const result = await client.query(aquery);
 
-  try {
+    return result.rows;
+
+ if (result.rows < 0) try {
     const query = `
-      INSERT INTO north4_he (id,r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, r13, r14, r15, r16, r17, r18, r19, r20, r21, r22, r23, r24, r25, r26, r27, r28, r29, r30, r31, r32, r33, r34, r35, r36)
+      INSERT INTO north4_e (id, r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, r13, r14, r15, r16, r17, r18, r19, r20, r21, r22, r23, r24, r25, r26, r27, r28, r29, r30, r31, r32, r33, r34, r35, r36)
       VALUES (1, 'aucun', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'aucun', 'aucun', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'aucun', 'aucun', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'aucun');
     `;
 
@@ -88,10 +92,10 @@ async function getData() {
   const client = await pool.connect();
 
   try {
-   const query = 'SELECT * FROM north4_he';
+   const query = 'SELECT r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, r13, r14, r15, r16, r17, r18, r19, r20, r21, r22, r23, r24, r25, r26, r27, r28, r29, r30, r31, r32, r33, r34, r35, r36 FROM north4_e WHERE id =1';
     const result = await client.query(query);
 
-    return result.rows;
+    return result.rows[0];
   } catch (error) {
     console.error('Erreur lors de la récupération des données:', error);
   } finally {
