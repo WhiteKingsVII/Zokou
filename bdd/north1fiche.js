@@ -16,7 +16,7 @@ async function createNorth1FicheTable() {
   try {
     // Créez la table north4_che si elle n'existe pas déjà
     await client.query(`
-      CREATE TABLE IF NOT EXISTS north4(
+      CREATE TABLE IF NOT EXISTS north4_(
         id SERIAL PRIMARY KEY,
         r1 TEXT DEFAULT 'aucun',
         r2 INTEGER DEFAULT 0,
@@ -67,15 +67,15 @@ async function createNorth1FicheTable() {
 // Fonction pour insérer des données
 async function insertData() {
   const client = await pool.connect();
-const aquery = 'SELECT r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, r13, r14, r15, r16, r17, r18, r19, r20, r21, r22, r23, r24, r25, r26, r27, r28, r29, r30, r31, r32, r33, r34, r35, r36 FROM north4 WHERE id =1';
+const aquery = 'SELECT r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, r13, r14, r15, r16, r17, r18, r19, r20, r21, r22, r23, r24, r25, r26, r27, r28, r29, r30, r31, r32, r33, r34, r35, r36 FROM north4_ WHERE id =1';
     const result = await client.query(aquery);
 
     return result.rows;
 
  if (result.rows < 0) try {
     const query = `
-      INSERT INTO north4_e (id, r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, r13, r14, r15, r16, r17, r18, r19, r20, r21, r22, r23, r24, r25, r26, r27, r28, r29, r30, r31, r32, r33, r34, r35, r36)
-      VALUES (1, 'aucun', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'aucun', 'aucun', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'aucun', 'aucun', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'aucun');
+      INSERT INTO north4_ (r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, r13, r14, r15, r16, r17, r18, r19, r20, r21, r22, r23, r24, r25, r26, r27, r28, r29, r30, r31, r32, r33, r34, r35, r36)
+      VALUES ('aucun', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'aucun', 'aucun', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'aucun', 'aucun', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'aucun');
     `;
 
     await client.query(query);
@@ -92,7 +92,7 @@ async function getData() {
   const client = await pool.connect();
 
   try {
-   const query = 'SELECT r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, r13, r14, r15, r16, r17, r18, r19, r20, r21, r22, r23, r24, r25, r26, r27, r28, r29, r30, r31, r32, r33, r34, r35, r36 FROM north4 WHERE id =1';
+   const query = 'SELECT r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, r13, r14, r15, r16, r17, r18, r19, r20, r21, r22, r23, r24, r25, r26, r27, r28, r29, r30, r31, r32, r33, r34, r35, r36 FROM north4_ WHERE id =1';
     const result = await client.query(query);
 
     return result.rows[0];
