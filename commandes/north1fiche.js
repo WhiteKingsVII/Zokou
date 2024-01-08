@@ -126,13 +126,13 @@ Records: 0 Victoires✅/ 0 Défaites❌
 
           const colonneObjet = colonnesJoueur[object];
 if (colonneObjet && (signe === '+' || signe === '-')) {
-        const query = `UPDATE north4 SET ${colonneObjet} = ${colonneObjet} ${signe} ${valeur} WHERE id = 1`;
+        const query = `UPDATE north4_ SET ${colonneObjet} = ${colonneObjet} ${signe} ${valeur} WHERE id = 1`;
         await client.query(query);
 
         console.log(`Données de l'utilisateur ${joueur} mises à jour`);
        await  repondre(`Données du joueur mises à jour\n👤 *JOUEUR*: ${joueur}\n⚙ *OBJECT*: ${object}\n💵 *VALEUR*: ${signe}${valeur}\n*NOUVEAU SOLDE*: ${data[colonneObjet]}`);
     } else if (colonneObjet && signe === '=') {
-        const query = `INSERT INTO north4 (${colonneObjet}) VALUES (${valeur}) WHERE id = 1`;
+        const query = `INSERT INTO north4_ (${colonneObjet}) VALUES (${valeur}) WHERE id = 1`;
         await client.query(query);
 
         console.log(`données du joueur: ${joueur} mise à jour`);
@@ -142,7 +142,7 @@ if (colonneObjet && (signe === '+' || signe === '-')) {
         repondre(`Une erreur est survenue. Veuillez entrer correctement les données.`);
     }
 } else if (arg[0] === 'active') {
-    const query = `UPDATE north4 SET r2 = 0`;
+    const query = `UPDATE north4_ SET r2 = 0`;
     await client.query(query);
     console.log('base de données activée');
     repondre('success base de données activée');
