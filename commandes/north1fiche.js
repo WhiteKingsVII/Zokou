@@ -127,26 +127,24 @@ Records: 0 Victoires✅/ 0 Défaites❌
           const colonneObjet = colonnesJoueur[object];
 
           if (colonneObjet && (signe === '+' || signe === '-')) {
-            const query = `UPDATE north4_he SET ${colonneObjet} = ${colonneObjet} ${signe} ${valeur} WHERE id = 1`;
+            const query = `UPDATE north4_e SET ${colonneObjet} = ${colonneObjet} ${signe} ${valeur} WHERE id = 1`;
             await client.query(query);
 
             console.log(`Données de l'utilisateur ${joueur} mises à jour`);
-            repondre(`Données du joueur mises à jour\n👤*JOUEUR*: ${joueur}\n⚙*OBJECT*: ${object}\n💵*VALEUR*: ${signe}${valeur}\n*NOUVEAU SOLDE*: ${data.colonneObjet}`);
-          } else {
+            repondre(`Données du joueur mises à jour\n👤 *JOUEUR*: ${joueur}\n⚙ *OBJECT*: ${object}\n💵 *VALEUR*: ${signe}${valeur}\n*NOUVEAU SOLDE*: ${data.colonneObjet}`);
+          } else if {
             console.log("Nom d'objet non reconnu ou signe invalide.");
             repondre(`Une erreur est survenue. Veuillez entrer correctement les données.`);
-          }
-        } else {
-          console.log("Le message ne correspond pas au format attendu.");
-          repondre(`Le format du message est incorrect.`);
-        }
-
-        if (signe === '=') {
-          const query = `UPDATE north4_he SET ${colonneObjet} = ${valeur} WHERE id = 1`;
+          } else if (signe === '=') {
+          const query = `UPDATE north4_e SET ${colonneObjet} = ${valeur} WHERE id = 1`;
           await client.query(query);
 
           console.log(`données du joueur: ${joueur} mise a jour`);
-          repondre(`Données du joueur mises à jour\n👤*JOUEUR*: ${joueur}\n⚙*OBJECT*: ${object}\n💵*VALEUR*: ${valeur}\n*NOUVELLE CARDS/RANG_XP*: ${data.colonneObjet}`);
+          repondre(`Données du joueur mises à jour\n👤 *JOUEUR*: ${joueur}\n⚙ *OBJECT*: ${object}\n💵 *VALEUR*: ${valeur}\n*NOUVELLE CARDS/RANG_XP*: ${data.colonneObjet}`);
+        }
+        } else {
+          console.log("Le message ne correspond pas au format attendu.");
+          repondre(`Le format du message est incorrect.`);
         }
 
         client.release();
