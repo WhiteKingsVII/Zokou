@@ -137,15 +137,14 @@ Records: 0 Victoires✅/ 0 Défaites❌
 
         console.log(`données du joueur: ${joueur} mise à jour`);
         repondre(`Données du joueur mises à jour\n👤 *JOUEUR*: ${joueur}\n⚙ *OBJECT*: ${object}\n💵 *VALEUR*: ${valeur}\n*NOUVELLE CARDS/RANG_XP*: ${data[colonneObjet]}`);
+    } else {
+        console.log("Nom d'objet non reconnu ou signe invalide.");
+        repondre(`Une erreur est survenue. Veuillez entrer correctement les données.`);
     } else if (arg[0] === 'active') {
         const query = `UPDATE north4 SET r2 = 0`;
         await client.query(query);
         console.log('base de données activée');
         repondre('success base de données activée');
-    } else {
-        console.log("Nom d'objet non reconnu ou signe invalide.");
-        repondre(`Une erreur est survenue. Veuillez entrer correctement les données.`);
-    }
 } else {
     console.log("Le message ne correspond pas au format attendu.");
     repondre(`Le format du message est incorrect.`);
