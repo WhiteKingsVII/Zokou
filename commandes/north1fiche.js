@@ -127,13 +127,13 @@ zk.sendMessage(dest, { image: { url: 'https://i.imgur.com/UP1ubll.jpg' }, captio
           const colonneObjet = colonnesJoueur[object];
 
           if (colonneObjet && (signe === '+' || signe === '-')) {
-            const query = `UPDATE north4_ SET ${colonneObjet} = ${colonneObjet} ${signe} ${valeur} WHERE id = 1`;
+            const query = `UPDATE north4_1 SET ${colonneObjet} = ${colonneObjet} ${signe} ${valeur} WHERE id = 1`;
             await client.query(query);
 
             console.log(`Données de l'utilisateur ${joueur} mises à jour`);
            await repondre(`Données du joueur mises à jour\n👤 *JOUEUR*: ${joueur}\n⚙ *OBJECT*: ${object}\n💵 *VALEUR*: ${signe}${valeur}\n*NOUVEAU SOLDE*: ${data[colonneObjet]}`);
           } else if (colonneObjet && signe === '=') {
-            const query = `INSERT INTO north4_ (${colonneObjet}) VALUES (${valeur}) WHERE id = 1`;
+            const query = `INSERT INTO north4_1 (${colonneObjet}) VALUES (${valeur}) WHERE id = 1`;
             await client.query(query);
 
             console.log(`données du joueur: ${joueur} mise à jour`);
@@ -142,6 +142,11 @@ zk.sendMessage(dest, { image: { url: 'https://i.imgur.com/UP1ubll.jpg' }, captio
             console.log("Nom d'objet non reconnu ou signe invalide.");
             repondre(`Une erreur est survenue. Veuillez entrer correctement les données.`);
           }
+        } else if (arg[0] === 'act') {
+          const query = `UPDATE north4_1 SET r2 = 0`;
+          await client.query(query);
+          console.log('base de données activée');
+          repondre('success base de données activée');
         } else {
           console.log("Le message ne correspond pas au format attendu.");
           repondre(`Le format du message est incorrect.`);
