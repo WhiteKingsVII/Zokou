@@ -142,11 +142,6 @@ zk.sendMessage(dest, { image: { url: 'https://i.imgur.com/UP1ubll.jpg' }, captio
             console.log("Nom d'objet non reconnu ou signe invalide.");
             repondre(`Une erreur est survenue. Veuillez entrer correctement les données.`);
           }
-        } else if (arg[0] === 'active') {
-          const query = `UPDATE north4_ SET r2 = 0`;
-          await client.query(query);
-          console.log('base de données activée');
-          repondre('success base de données activée');
         } else {
           console.log("Le message ne correspond pas au format attendu.");
           repondre(`Le format du message est incorrect.`);
