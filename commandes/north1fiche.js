@@ -15,7 +15,7 @@ zokou(
       let object = arg[3];
       let signe = arg[4];
       let valeur = arg[5];
-      let texte = arg.join(' ');
+      let texte = arg.slice(5).join(' ');
 
       if (!arg || arg.length === 0) {
         let mesg = `.*𝗡𝗢𝗥𝗧𝗛 𝗗𝗜𝗩𝗜𝗦𝗜𝗢𝗡🐺🔴*
@@ -133,8 +133,8 @@ zk.sendMessage(dest, { image: { url: 'https://i.imgur.com/UP1ubll.jpg' }, captio
 
             console.log(`Données de l'utilisateur ${joueur} mises à jour`);
            await repondre(`Données du joueur mises à jour\n👤 *JOUEUR*: ${joueur}\n⚙ *OBJECT*: ${object}\n💵 *VALEUR*: ${signe}${valeur}\n*NOUVEAU SOLDE*: ${colonneObjet} ${signe} ${valeur}`);
-          } else if (arg) {
-            const query = `UPDATE north4_1 SET ${colonneObjet} = ${valeur} WHERE id = 1`;
+          } else if (colonneObjet && signe === '=') {
+            const query = `UPDATE north4_1 SET ${colonneObjet} = ${texte} WHERE id = 1`;
             await client.query(query);
 
             console.log(`données du joueur: ${joueur} mise à jour`);
