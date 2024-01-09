@@ -1,6 +1,6 @@
 const { Pool } = require("pg");
 
-var dbUrl = "postgres://neoverse_user:e4Ts4KmggWvcvG3K2ijj9Cu2OciBJLff@dpg-ckrsaafd47qs73b2kt40-a.oregon-postgres.render.com/neoverse";
+var dbUrl = "postgresql://postgres:aga-B533E3BcGdfa5*cFf*4daE4*f*fB@monorail.proxy.rlwy.net:12102/railway";
 const proConfig = {
   connectionString: dbUrl,
   ssl: {
@@ -72,11 +72,10 @@ const aquery = 'SELECT r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, r13, r
 
     return result.rows;
 
- if (result.rows < 0) try {
+ if (result.rows.length === 0) try {
     const query = `
-      INSERT INTO north4_ (r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, r13, r14, r15, r16, r17, r18, r19, r20, r21, r22, r23, r24, r25, r26, r27, r28, r29, r30, r31, r32, r33, r34, r35, r36)
-      VALUES ('aucun', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'aucun', 'aucun', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'aucun', 'aucun', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'aucun');
-    `;
+      INSERT INTO north4_ (id, r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, r13, r14, r15, r16, r17, r18, r19, r20, r21, r22, r23, r24, r25, r26, r27, r28, r29, r30, r31, r32, r33, r34, r35, r36)
+      VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26, $27, $28, $29, $30, $31, $32, $33, $34, $35, $36)` ,[1, 'aucun', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'aucun', 'aucun', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'aucun', 'aucun', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'aucun']);
 
     await client.query(query);
     console.log('Données insérées avec succès');
@@ -95,7 +94,7 @@ async function getData() {
    const query = 'SELECT r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, r13, r14, r15, r16, r17, r18, r19, r20, r21, r22, r23, r24, r25, r26, r27, r28, r29, r30, r31, r32, r33, r34, r35, r36 FROM north4_ WHERE id =1';
     const result = await client.query(query);
 
-    return result.rows[0];
+    return result.rows;
   } catch (error) {
     console.error('Erreur lors de la récupération des données:', error);
   } finally {
