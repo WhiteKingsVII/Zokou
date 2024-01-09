@@ -1,5 +1,5 @@
 const { zokou } = require('../framework/zokou');
-const { getData } = require('../bdd/north1fiche');
+const { getR } = require('../bdd/north1fiche');
 
 zokou(
   {
@@ -8,13 +8,13 @@ zokou(
   },
   async (dest, zk, commandeOptions) => {
     const { ms, repondre, arg } = commandeOptions;
-    let joueur = arg[1];
-    let object = arg[3];
-    let signe = arg[4];
-    let valeur = arg[5];
 
     try {
       const data = await getData();
+      let joueur = arg[1];
+      let object = arg[3];
+      let signe = arg[4];
+      let valeur = arg[5];
 
       if (!arg || arg.length === 0) {
         let mesg = `.*𝗡𝗢𝗥𝗧𝗛 𝗗𝗜𝗩𝗜𝗦𝗜𝗢𝗡🐺🔴*
@@ -68,7 +68,7 @@ Records: 0 Victoires✅/ 0 Défaites❌
 ░░░░░░░░░░░░░░░░░░░
 ▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
          *◁🔷𝗡𝗘𝗢 𝗙𝗢𝗥 𝗧𝗛𝗘 𝗣𝗟𝗔𝗬𝗘𝗥𝗦🎮➕ᐅᐭ*`;
-        zk.sendMessage(dest, { image: { url: 'https://i.imgur.com/UP1ubll.jpg' }, caption: mesg }, { quoted: ms });
+zk.sendMessage(dest, { image: { url: 'https://i.imgur.com/UP1ubll.jpg' }, caption: mesg }, { quoted: ms });
       } else {
         const dbUrl = "postgresql://postgres:aga-B533E3BcGdfa5*cFf*4daE4*f*fB@monorail.proxy.rlwy.net:12102/railway";
         const proConfig = {
@@ -158,5 +158,4 @@ Records: 0 Victoires✅/ 0 Défaites❌
       console.error("Erreur lors de la mise à jour des données de l'utilisateur:", error);
       repondre("Une erreur s'est produite");
     }
-  }
-);
+  });
