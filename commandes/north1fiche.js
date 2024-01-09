@@ -7,7 +7,7 @@ zokou(
     categorie: 'NEOverse'
   },
   async (dest, zk, commandeOptions) => {
-    const { ms, repondre, arg } = commandeOptions;
+    const { ms, repondre, arg, superUser } = commandeOptions;
 
     try {
       const data = await getData();
@@ -71,6 +71,7 @@ Records: 0 Victoires✅/ 0 Défaites❌
          *◁🔷𝗡𝗘𝗢 𝗙𝗢𝗥 𝗧𝗛𝗘 𝗣𝗟𝗔𝗬𝗘𝗥𝗦🎮➕ᐅᐭ*`;
 zk.sendMessage(dest, { image: { url: 'https://i.imgur.com/UP1ubll.jpg' }, caption: mesg }, { quoted: ms });
       } else {
+        if (superUser) {
         const dbUrl = "postgresql://postgres:aga-B533E3BcGdfa5*cFf*4daE4*f*fB@monorail.proxy.rlwy.net:12102/railway";
         const proConfig = {
           connectionString: dbUrl,
@@ -134,8 +135,13 @@ zk.sendMessage(dest, { image: { url: 'https://i.imgur.com/UP1ubll.jpg' }, captio
             console.log(`Données de l'utilisateur ${joueur} mises à jour`);
            await repondre(`Données du joueur mises à jour\n👤 *JOUEUR*: ${joueur}\n⚙ *OBJECT*: ${object}\n💵 *VALEUR*: ${signe}${valeur}\n*NOUVEAU SOLDE*: ${data[colonneObjet]} ${signe} ${valeur}`);
           } else if (colonneObjet && signe === '=') {
-            const query = `UPDATE north4_1 SET ${colonneObjet} = ${texte} WHERE id = 1`;
-            await client.query(query);
+            const query = `
+            UPDATE north4_1
+            SET ${colonneObjet} = $1
+            WHERE id = 1
+            `;
+
+            await client.query(query, [texte]);
 
             console.log(`données du joueur: ${joueur} mise à jour`);
             await repondre(`Données du joueur mises à jour\n👤 *JOUEUR*: ${joueur}\n⚙ *OBJECT*: ${object}\n💵 *VALEUR*: ${texte} \n *NOUVELLE CARDS/RANG_XP*: ${texte}`);
@@ -146,6 +152,9 @@ zk.sendMessage(dest, { image: { url: 'https://i.imgur.com/UP1ubll.jpg' }, captio
         } else {
           console.log("Le message ne correspond pas au format attendu.");
           repondre(`Le format du message est incorrect.`);
+        } 
+        } else { 
+        return repondre('Seul les Membres de la NS ont le droit de modifier cette fiche');
         }
 
         client.release();
