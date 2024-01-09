@@ -18,11 +18,11 @@ zokou({ nomCom: "apk", reaction: "✨", categorie: "Recherche" }, async (dest, z
   try {
     const recherche = search(nom);
 
-    if (!recherche || recherche.length === 0 || !recherche[0].id) {
+    if (!recherche || recherche.length === 0 || !recherche[0]) {
       return repondre(`L'application recherchée est introuvable ou ne possède pas d'ID.`);
     }
 
-    const data = await download(recherche[0].id);
+    const data = await download(recherche[0]);
     const appSize = parseInt(data.size);
 
     if (appSize > 300) {
