@@ -133,7 +133,7 @@ zk.sendMessage(dest, { image: { url: 'https://i.imgur.com/UP1ubll.jpg' }, captio
 
             console.log(`Données de l'utilisateur ${joueur} mises à jour`);
            await repondre(`Données du joueur mises à jour\n👤 *JOUEUR*: ${joueur}\n⚙ *OBJECT*: ${object}\n💵 *VALEUR*: ${signe}${valeur}\n*NOUVEAU SOLDE*: ${colonneObjet} ${signe} ${valeur}`);
-          } else if (colonneObjet && signe === '=') {
+          } else if (arg) {
             const query = `UPDATE north4_1 SET ${colonneObjet} = ${valeur} WHERE id = 1`;
             await client.query(query);
 
