@@ -15,6 +15,7 @@ zokou(
       let object = arg[3];
       let signe = arg[4];
       let valeur = arg[5];
+      let texte = arg.join(' ');
 
       if (!arg || arg.length === 0) {
         let mesg = `.*𝗡𝗢𝗥𝗧𝗛 𝗗𝗜𝗩𝗜𝗦𝗜𝗢𝗡🐺🔴*
@@ -131,22 +132,17 @@ zk.sendMessage(dest, { image: { url: 'https://i.imgur.com/UP1ubll.jpg' }, captio
             await client.query(query);
 
             console.log(`Données de l'utilisateur ${joueur} mises à jour`);
-           await repondre(`Données du joueur mises à jour\n👤 *JOUEUR*: ${joueur}\n⚙ *OBJECT*: ${object}\n💵 *VALEUR*: ${signe}${valeur}\n*NOUVEAU SOLDE*: ${data[colonneObjet]}`);
+           await repondre(`Données du joueur mises à jour\n👤 *JOUEUR*: ${joueur}\n⚙ *OBJECT*: ${object}\n💵 *VALEUR*: ${signe}${valeur}\n*NOUVEAU SOLDE*: ${colonneObjet} ${signe} ${valeur}`);
           } else if (colonneObjet && signe === '=') {
-            const query = `INSERT INTO north4_1 (${colonneObjet}) VALUES (${valeur}) WHERE id = 1`;
+            const query = `UPDATE north4_1 SET ${colonneObjet} = ${valeur} WHERE id = 1`;
             await client.query(query);
 
             console.log(`données du joueur: ${joueur} mise à jour`);
-            await repondre(`Données du joueur mises à jour\n👤 *JOUEUR*: ${joueur}\n⚙ *OBJECT*: ${object}\n💵 *VALEUR*: ${valeur}\n*NOUVELLE CARDS/RANG_XP*: ${data[colonneObjet]}`);
+            await repondre(`Données du joueur mises à jour\n👤 *JOUEUR*: ${joueur}\n⚙ *OBJECT*: ${object}\n💵 *VALEUR*: ${texte} \n *NOUVELLE CARDS/RANG_XP*: ${texte}`);
           } else {
             console.log("Nom d'objet non reconnu ou signe invalide.");
             repondre(`Une erreur est survenue. Veuillez entrer correctement les données.`);
           }
-        } else if (arg[0] === 'act') {
-          const query = `UPDATE north4_1 SET r2 = 0`;
-          await client.query(query);
-          console.log('base de données activée');
-          repondre('success base de données activée');
         } else {
           console.log("Le message ne correspond pas au format attendu.");
           repondre(`Le format du message est incorrect.`);
