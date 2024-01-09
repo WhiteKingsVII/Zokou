@@ -75,7 +75,7 @@ Records: 0 Victoires✅/ 0 Défaites❌
           connectionString: dbUrl,
           ssl: {
             rejectUnauthorized: false,
-          },
+          },0
         };
 
         const { Pool } = require('pg');
