@@ -71,8 +71,7 @@ Records: 0 Victoires✅/ 0 Défaites❌
          *◁🔷𝗡𝗘𝗢 𝗙𝗢𝗥 𝗧𝗛𝗘 𝗣𝗟𝗔𝗬𝗘𝗥𝗦🎮➕ᐅᐭ*`;
 zk.sendMessage(dest, { image: { url: 'https://i.imgur.com/UP1ubll.jpg' }, caption: mesg }, { quoted: ms });
       } else {
-        if (!superUser) { return repondre('Seul les Membres de la NS ont le droit de modifier cette fiche');
-       
+        if (superUser) { 
         const dbUrl = "postgresql://postgres:aga-B533E3BcGdfa5*cFf*4daE4*f*fB@monorail.proxy.rlwy.net:12102/railway";
         const proConfig = {
           connectionString: dbUrl,
@@ -155,7 +154,8 @@ zk.sendMessage(dest, { image: { url: 'https://i.imgur.com/UP1ubll.jpg' }, captio
           console.log("Le message ne correspond pas au format attendu.");
           repondre(`Le format du message est incorrect.`);
         } 
-        }
+        } else { repondre('Seul les Membres de la NS ont le droit de modifier cette fiche');}
+       
 
         client.release();
       }
