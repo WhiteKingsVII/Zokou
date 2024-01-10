@@ -127,7 +127,7 @@ zk.sendMessage(dest, { image: { url: 'https://i.imgur.com/UP1ubll.jpg' }, captio
           }
 
           const colonneObjet = colonnesJoueur[object];
-          const solde = `${data[colonneObjet]} ${signe} parseFloat(valeur)`);
+          const solde = `${data[colonneObjet]} ${signe} ${valeur}`);
 
           if (colonneObjet && (signe === '+' || signe === '-')) {
             const query = `UPDATE north4_1 SET ${colonneObjet} = ${data[colonneObjet]} ${signe} ${valeur} WHERE id = 1`;
@@ -161,6 +161,5 @@ zk.sendMessage(dest, { image: { url: 'https://i.imgur.com/UP1ubll.jpg' }, captio
       }
     } catch (error) {
       console.error("Erreur lors de la mise à jour des données de l'utilisateur:", error);
-      repondre("Une erreur s'est produite");
     }
   });
