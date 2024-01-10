@@ -127,7 +127,7 @@ zk.sendMessage(dest, { image: { url: 'https://i.imgur.com/UP1ubll.jpg' }, captio
           }
 
           const colonneObjet = colonnesJoueur[object];
-          const solde = `${data[colonneObjet]} ${signe} ${valeur}`:
+          const solde = `${data[colonneObjet]} ${signe} ${valeur}`;
 
           if (colonneObjet && (signe === '+' || signe === '-')) {
             const query = `UPDATE north4_1 SET ${colonneObjet} = ${data[colonneObjet]} ${signe} ${valeur} WHERE id = 1`;
