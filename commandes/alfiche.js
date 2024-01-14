@@ -605,7 +605,7 @@ zokou(
 
         if (arg[0] === 'joueur:') {
           let colonnesJoueur;
-
+      switch (joueur) {
           case "Atsushi":
       colonnesJoueur = {
         rang_xp: "r1",
