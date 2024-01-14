@@ -10,7 +10,7 @@ const proConfig = {
 
 const pool = new Pool(proConfig);
 
-async function createNorth1FicheTable() {
+async function createAlFicheTable() {
   const client = await pool.connect();
 
   try {
@@ -270,10 +270,20 @@ async function getData12() {
 
 // Appeler la fonction createNorth1FicheTable après la création de la table
 createNorth1FicheTable();
-insertData();
 
 module.exports = {
-  createNorth1FicheTable,
+  createAlFicheTable,
   insertData,
-  getData,
+  getData1,
+  getData2,
+  getData3,
+  getData4,
+  getData5,
+  getData6,
+  getData7,
+  getData8,
+  getData9,
+  getData10,
+  getData11,
+  getData12,
 };
