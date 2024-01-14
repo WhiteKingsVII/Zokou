@@ -270,7 +270,7 @@ async function getData12() {
 
 // Appeler la fonction createNorth1FicheTable après la création de la table
 createAlFicheTable();
-insererData();
+insertData();
 
 module.exports = {
   createAlFicheTable,
