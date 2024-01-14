@@ -1,5 +1,16 @@
 const { zokou } = require('../framework/zokou');
-const { getData } = require('../bdd/north1fiche');
+const { getData1 } = require('../bdd/alfiche');
+const { getData2 } = require('../bdd/alfiche');
+const { getData3 } = require('../bdd/alfiche');
+const { getData4 } = require('../bdd/alfiche');
+const { getData5 } = require('../bdd/alfiche');
+const { getData6 } = require('../bdd/alfiche');
+const { getData7 } = require('../bdd/alfiche');
+const { getData8 } = require('../bdd/alfiche');
+const { getData9 } = require('../bdd/alfiche');
+const { getData10 } = require('../bdd/alfiche');
+const { getData11 } = require('../bdd/alfiche');
+const { getData12 } = require('../bdd/alfiche');
 
 zokou(
   {
@@ -72,7 +83,7 @@ Records: 0 Victoires✅/ 0 Défaites❌
 zk.sendMessage(dest, { image: { url: 'https://i.imgur.com/UP1ubll.jpg' }, caption: mesg }, { quoted: ms });
       } else {
         if (superUser) { 
-        const dbUrl = "postgresql://postgres:aga-B533E3BcGdfa5*cFf*4daE4*f*fB@monorail.proxy.rlwy.net:12102/railway";
+        const dbUrl = "postgres://neoverse_user:e4Ts4KmggWvcvG3K2ijj9Cu2OciBJLff@dpg-ckrsaafd47qs73b2kt40-a.oregon-postgres.render.com/neoverse";
         const proConfig = {
           connectionString: dbUrl,
           ssl: {
@@ -163,3 +174,81 @@ zk.sendMessage(dest, { image: { url: 'https://i.imgur.com/UP1ubll.jpg' }, captio
       console.error("Erreur lors de la mise à jour des données de l'utilisateur:", error);
     }
   });
+
+
+zokou(
+  {
+    nomCom: '',
+    categorie: 'NEOverse'
+  },
+  async (dest, zk, commandeOptions) => {
+    const { ms, repondre, arg, superUser } = commandeOptions;
+
+    try {
+      const data = await getData();
+      let joueur = arg[1];
+      let object = arg[3];
+      let signe = arg[4];
+      let valeur = arg[5];
+      let texte = arg.slice(5).join(' ');
+
+     if (!arg || arg.length === 0) {
+        let mesg = ``;
+          zk.sendMessage(dest, { image: { url: 'https://i.imgur.com/UP1ubll.jpg' }, caption: mesg }, { quoted: ms });
+      } else {
+        if (superUser) { 
+        const dbUrl = "postgres://neoverse_user:e4Ts4KmggWvcvG3K2ijj9Cu2OciBJLff@dpg-ckrsaafd47qs73b2kt40-a.oregon-postgres.render.com/neoverse";
+        const proConfig = {
+          connectionString: dbUrl,
+          ssl: {
+            rejectUnauthorized: false,
+          },
+        };
+
+        const { Pool } = require('pg');
+        const pool = new Pool(proConfig);
+        const client = await pool.connect();
+
+        if (arg[0] === 'joueur:') {
+          let colonnesJoueur;
+
+          
+
+          const colonneObjet = colonnesJoueur[object];
+          const solde = `${data[colonneObjet]} ${signe} ${valeur}`;
+
+          if (colonneObjet && (signe === '+' || signe === '-')) {
+            const query = `UPDATE north4_1 SET ${colonneObjet} = ${data[colonneObjet]} ${signe} ${valeur} WHERE id = 1`;
+            await client.query(query);
+
+            console.log(`Données de l'utilisateur ${joueur} mises à jour`);
+           await repondre(`Données du joueur mises à jour\n👤 *JOUEUR*: ${joueur}\n⚙ *OBJECT*: ${object}\n💵 *VALEUR*: ${signe}${valeur}\n*NOUVEAU SOLDE*: ${solde}`);
+          } else if (colonneObjet && signe === '=') {
+            const query = `
+            UPDATE north4_1
+            SET ${colonneObjet} = $1
+            WHERE id = 1
+            `;
+
+            await client.query(query, [texte]);
+
+            console.log(`données du joueur: ${joueur} mise à jour`);
+            await repondre(`Données du joueur mises à jour\n👤 *JOUEUR*: ${joueur}\n⚙ *OBJECT*: ${object}\n💵 *VALEUR*: ${texte} \n *NOUVELLE CARDS/RANG_XP*: ${texte}`);
+          } else {
+            console.log("Nom d'objet non reconnu ou signe invalide.");
+            repondre(`Une erreur est survenue. Veuillez entrer correctement les données.`);
+          }
+        } else {
+          console.log("Le message ne correspond pas au format attendu.");
+          repondre(`Le format du message est incorrect.`);
+        } 
+        } else { repondre('Seul les Membres de la NS ont le droit de modifier cette fiche');}
+       
+
+        client.release();
+      }
+    } catch (error) {
+      console.error("Erreur lors de la mise à jour des données de l'utilisateur:", error);
+    }
+  });
+          
