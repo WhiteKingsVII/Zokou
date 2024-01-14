@@ -99,7 +99,7 @@ zk.sendMessage(dest, { image: { url: 'https://i.imgur.com/UP1ubll.jpg' }, captio
           let colonnesJoueur;
 
           switch (joueur) {
-            case "lily":
+            case "Lily":
               colonnesJoueur = {
                 rang_xp: "r1",
                 golds: "r2",
@@ -115,7 +115,7 @@ zk.sendMessage(dest, { image: { url: 'https://i.imgur.com/UP1ubll.jpg' }, captio
                 cards: "r12",
               };
               break;
-            case "damian":
+            case "Damian":
               colonnesJoueur = {
                 rang_xp: "r13",
                 golds: "r14",
@@ -243,7 +243,7 @@ Records: ${data.r31} Victoires✅/ ${data.r32} Défaites❌
 *🎴Cards(15 max)*: ${data.r36}
 ░░░░░░░░░░░░░░░░░░░
 ▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
-         *◁🔷𝗡𝗘𝗢 𝗙𝗢𝗥 𝗧𝗛𝗘 𝗣𝗟𝗔𝗬𝗘𝗥𝗦🎮➕ᐅᐭ*`;
+         *🔷𝗡Ξ𝗢24🏆🔝*`;
           zk.sendMessage(dest, { image: { url: 'https://i.imgur.com/UP1ubll.jpg' }, caption: mesg }, { quoted: ms });
       } else {
         if (superUser) { 
@@ -261,11 +261,64 @@ Records: ${data.r31} Victoires✅/ ${data.r32} Défaites❌
 
         if (arg[0] === 'joueur:') {
           let colonnesJoueur;
-
           
-
-          const colonneObjet = colonnesJoueur[object];
-          const solde = `${data[colonneObjet]} ${signe} ${valeur}`;
+          switch (joueur) {
+    case "Lord":
+      colonnesJoueur = {
+        rang_xp: "r1",
+        golds: "r2",
+        neocoins: "r3",
+        gift_box: "r4",
+        coupons: "r5",
+        neo_pass: "r6",
+        victoires: "r7",
+        defaites: "r8",
+        trophees: "r9",
+        tos: "r10",
+        awards: "r11",
+        cards: "r12",
+      };
+      break;
+    case "Ainz":
+      colonnesJoueur = {
+        rang_xp: "r13",
+        golds: "r14",
+        neocoins: "r15",
+        gift_box: "r16",
+        coupons: "r17",
+        neo_pass: "r18",
+        victoires: "r19",
+        defaites: "r20",
+        trophees: "r21",
+        tos: "r22",
+        awards: "r23",
+        cards: "r24",
+      };
+      break;
+    case "Seijin":
+      colonnesJoueur = {
+        rang_xp: "r25",
+        golds: "r26",
+        neocoins: "r27",
+        gift_box: "r28",
+        coupons: "r29",
+        neo_pass: "r30",
+        victoires: "r31",
+        defaites: "r32",
+        trophees: "r33",
+        tos: "r34",
+        awards: "r35",
+        cards: "r36",
+      };
+      break;
+    default:
+      console.log("Nom de joueur non reconnu.");
+              repondre(`joueur: ${joueur} non reconnu`);
+              return; 
+        }
+          
+        const colonneObjet = colonnesJoueur[object];
+        const solde = `${data[colonneObjet]} ${signe} ${valeur}`;
 
           if (colonneObjet && (signe === '+' || signe === '-')) {
             const query = `UPDATE alfiche SET ${colonneObjet} = ${data[colonneObjet]} ${signe} ${valeur} WHERE id = 2`;
@@ -320,7 +373,7 @@ zokou(
       let texte = arg.slice(5).join(' ');
 
      if (!arg || arg.length === 0) {
-        let mesg = `.*NORTH DIVISION🐺🔴
+        let mesg = `.*𝗡𝗢𝗥𝗧𝗛 𝗗𝗜𝗩𝗜𝗦𝗜𝗢𝗡🐺🔴*
 ░░░░░░░░░░░░░░░░░░░
 ▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
 ◇ *Pseudo👤*: Thanatos Gold King🇧🇫
@@ -389,7 +442,44 @@ zokou(
         if (arg[0] === 'joueur:') {
           let colonnesJoueur;
 
-          
+          switch (joueur) {
+            case "Thanatos":
+              colonnesJoueur = {
+                rang_xp: "r1",
+                golds: "r2",
+                neocoins: "r3",
+                gift_box: "r4",
+                coupons: "r5",
+                neo_pass: "r6",
+                victoires: "r7",
+                defaites: "r8",
+                trophees: "r9",
+                tos: "r10",
+                awards: "r11",
+                cards: "r12",
+              };
+              break;
+            case "Adorieru":
+              colonnesJoueur = {
+                rang_xp: "r13",
+                golds: "r14",
+                neocoins: "r15",
+                gift_box: "r16",
+                coupons: "r17",
+                neo_pass: "r18",
+                victoires: "r19",
+                defaites: "r20",
+                trophees: "r21",
+                tos: "r22",
+                awards: "r23",
+                cards: "r24",
+              };
+              break;
+            default:
+              console.log("Nom de joueur non reconnu.");
+              repondre(`joueur: ${joueur} non reconnu`);
+              return; 
+          }   
 
           const colonneObjet = colonnesJoueur[object];
           const solde = `${data[colonneObjet]} ${signe} ${valeur}`;
@@ -447,7 +537,7 @@ zokou(
       let texte = arg.slice(5).join(' ');
 
      if (!arg || arg.length === 0) {
-        let mesg = `.* 𝗘𝗔𝗦𝗧 𝗗𝗜𝗩𝗜𝗦𝗜𝗢𝗡🦅🟢*
+        let mesg = `.*𝗘𝗔𝗦𝗧 𝗗𝗜𝗩𝗜𝗦𝗜𝗢𝗡🦅🟢*
 ░░░░░░░░░░░░░░░░░░░
 ▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
 ◇ *Pseudo👤*: Atsushi KÏNGS🇨🇲 
@@ -497,8 +587,7 @@ zokou(
 *🎴Cards(15 max)*: ${data.r36}
 ░░░░░░░░░░░░░░░░░░░
 ▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
-        *◁🔷𝗡𝗘𝗢 𝗙𝗢𝗥 𝗧𝗛𝗘 𝗣𝗟𝗔𝗬𝗘𝗥𝗦🎮➕ᐅᐭ
-*`;
+   *🔷𝗡Ξ𝗢24🏆🔝*`;
           zk.sendMessage(dest, { image: { url: 'https://i.imgur.com/EashJkj.jpg' }, caption: mesg }, { quoted: ms });
       } else {
         if (superUser) { 
@@ -517,7 +606,59 @@ zokou(
         if (arg[0] === 'joueur:') {
           let colonnesJoueur;
 
-          
+          case "Atsushi":
+      colonnesJoueur = {
+        rang_xp: "r1",
+        golds: "r2",
+        neocoins: "r3",
+        gift_box: "r4",
+        coupons: "r5",
+        neo_pass: "r6",
+        victoires: "r7",
+        defaites: "r8",
+        trophees: "r9",
+        tos: "r10",
+        awards: "r11",
+        cards: "r12",
+      };
+      break;
+    case "White":
+      colonnesJoueur = {
+        rang_xp: "r13",
+        golds: "r14",
+        neocoins: "r15",
+        gift_box: "r16",
+        coupons: "r17",
+        neo_pass: "r18",
+        victoires: "r19",
+        defaites: "r20",
+        trophees: "r21",
+        tos: "r22",
+        awards: "r23",
+        cards: "r24",
+      };
+      break;
+    case "Kemael":
+      colonnesJoueur = {
+        rang_xp: "r25",
+        golds: "r26",
+        neocoins: "r27",
+        gift_box: "r28",
+        coupons: "r29",
+        neo_pass: "r30",
+        victoires: "r31",
+        defaites: "r32",
+        trophees: "r33",
+        tos: "r34",
+        awards: "r35",
+        cards: "r36",
+      };
+      break;
+    default:
+      console.log("Nom de joueur non reconnu.");
+              repondre(`joueur: ${joueur} non reconnu`);
+              return; 
+          }   
 
           const colonneObjet = colonnesJoueur[object];
           const solde = `${data[colonneObjet]} ${signe} ${valeur}`;
@@ -625,8 +766,7 @@ zokou(
 *🎴Cards(15 max)*: {data.r36}
 ░░░░░░░░░░░░░░░░░░░
 ▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
-        *◁🔷𝗡𝗘𝗢 𝗙𝗢𝗥 𝗧𝗛𝗘 𝗣𝗟𝗔𝗬𝗘𝗥𝗦🎮➕ᐅᐭ
-*`;
+        *🔷𝗡Ξ𝗢24🏆🔝*`;
           zk.sendMessage(dest, { image: { url: 'https://i.imgur.com/EashJkj.jpg' }, caption: mesg }, { quoted: ms });
       } else {
         if (superUser) { 
@@ -645,7 +785,76 @@ zokou(
         if (arg[0] === 'joueur:') {
           let colonnesJoueur;
 
-          
+          switch (joueur) {
+    case "Hinata":
+      colonnesJoueur = {
+        rang_xp: "r1",
+        golds: "r2",
+        neocoins: "r3",
+        gift_box: "r4",
+        coupons: "r5",
+        neo_pass: "r6",
+        victoires: "r7",
+        defaites: "r8",
+        trophees: "r9",
+        tos: "r10",
+        awards: "r11",
+        cards: "r12",
+      };
+      break;
+    case "Goldy":
+      colonnesJoueur = {
+        rang_xp: "r13",
+        golds: "r14",
+        neocoins: "r15",
+        gift_box: "r16",
+        coupons: "r17",
+        neo_pass: "r18",
+        victoires: "r19",
+        defaites: "r20",
+        trophees: "r21",
+        tos: "r22",
+        awards: "r23",
+        cards: "r24",
+      };
+      break;
+    case "Goldy":
+      colonnesJoueur = {
+        rang_xp: "r13",
+        golds: "r14",
+        neocoins: "r15",
+        gift_box: "r16",
+        coupons: "r17",
+        neo_pass: "r18",
+        victoires: "r19",
+        defaites: "r20",
+        trophees: "r21",
+        tos: "r22",
+        awards: "r23",
+        cards: "r24",
+      };
+      break;
+    case "Utsune":
+      colonnesJoueur = {
+        rang_xp: "r25",
+        golds: "r26",
+        neocoins: "r27",
+        gift_box: "r28",
+        coupons: "r29",
+        neo_pass: "r30",
+        victoires: "r31",
+        defaites: "r32",
+        trophees: "r33",
+        tos: "r34",
+        awards: "r35",
+        cards: "r36",
+      };
+      break;
+      default:
+      console.log("Nom de joueur non reconnu.");
+              repondre(`joueur: ${joueur} non reconnu`);
+              return; 
+          }   
 
           const colonneObjet = colonnesJoueur[object];
           const solde = `${data[colonneObjet]} ${signe} ${valeur}`;
@@ -771,7 +980,44 @@ zokou(
         if (arg[0] === 'joueur:') {
           let colonnesJoueur;
 
-          
+          switch (joueur) {
+    case "Adam":
+      colonnesJoueur = {
+        rang_xp: "r1",
+        golds: "r2",
+        neocoins: "r3",
+        gift_box: "r4",
+        coupons: "r5",
+        neo_pass: "r6",
+        victoires: "r7",
+        defaites: "r8",
+        trophees: "r9",
+        tos: "r10",
+        awards: "r11",
+        cards: "r12",
+      };
+      break;
+    case "Altheos":
+      colonnesJoueur = {
+        rang_xp: "r13",
+        golds: "r14",
+        neocoins: "r15",
+        gift_box: "r16",
+        coupons: "r17",
+        neo_pass: "r18",
+        victoires: "r19",
+        defaites: "r20",
+        trophees: "r21",
+        tos: "r22",
+        awards: "r23",
+        cards: "r24",
+      };
+      break;
+    default:
+      console.log("Nom de joueur non reconnu.");
+              repondre(`joueur: ${joueur} non reconnu`);
+              return; 
+          }   
 
           const colonneObjet = colonnesJoueur[object];
           const solde = `${data[colonneObjet]} ${signe} ${valeur}`;
@@ -896,39 +1142,7 @@ zokou(
 *🎴Cards(15 max)*: ${data.r12}
 ░░░░░░░░░░░░░░░░░░░
 ▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
-
-◇ *Pseudo👤*: Altheos AETHERIA🇨🇮
-◇ *Rang XP🔰*: ${data.r13}
-◇ *Golds🧭*: ${data.r14}🧭
-◇ *NEOcoins🔹*: ${data.r15}🔷
-◇ *Gift Box🎁*: ${data.r16}🎁
-◇ *Coupons🎟️*: ${data.r17}🎟️
-◇ *NEO PASS🔸*: ${data.r18}🔸
-░░░░░░░░░░░░░░
-*Note*: ⭐⭐2/5
-*Records*: ${data.r19} Victoires✅/ ${data.r20} Défaites❌
-*🏆Trophées*: ${data.r21} *🌟TOS*: ${data.r22} *💫Awards*: ${data.r23}
-▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
-*🎴Cards(15 max)*: ${data.r24}
-░░░░░░░░░░░░░░░░░░░
-▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
-
-◇ *Pseudo👤*: 
-◇ *Rang XP🔰*: Joueur Classé🎮
-◇ *Golds🧭*:50.000🧭
-◇ *NEOcoins🔹*: 0🔷
-◇ *Gift Box🎁*: 0🎁
-◇ *Coupons🎟️*: 0🎟️
-◇ *NEO PASS🔸*: 0🔸
-░░░░░░░░░░░░░░
-*Note*: ⭐1/5
-*Records*: 0 Victoires✅/ 0 Défaites❌
-*🏆Trophées*: 0 *🌟TOS*: 0 *💫Awards*: 0
-▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
-*🎴Cards(15 max)*: 
-░░░░░░░░░░░░░░░░░░░
-▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
-         *🔷𝗡Ξ𝗢24🏆🔝*`;
+      *🔷𝗡Ξ𝗢24🏆🔝*`;
           zk.sendMessage(dest, { image: { url: 'https://i.imgur.com/crAlkxv.jpg' }, caption: mesg }, { quoted: ms });
       } else {
         if (superUser) { 
@@ -947,7 +1161,44 @@ zokou(
         if (arg[0] === 'joueur:') {
           let colonnesJoueur;
 
-          
+          switch (joueur) {
+    case "Aether":
+      colonnesJoueur = {
+        rang_xp: "r1",
+        golds: "r2",
+        neocoins: "r3",
+        gift_box: "r4",
+        coupons: "r5",
+        neo_pass: "r6",
+        victoires: "r7",
+        defaites: "r8",
+        trophees: "r9",
+        tos: "r10",
+        awards: "r11",
+        cards: "r12",
+      };
+      break;
+    case "SoloMoe":
+      colonnesJoueur = {
+        rang_xp: "r13",
+        golds: "r14",
+        neocoins: "r15",
+        gift_box: "r16",
+        coupons: "r17",
+        neo_pass: "r18",
+        victoires: "r19",
+        defaites: "r20",
+        trophees: "r21",
+        tos: "r22",
+        awards: "r23",
+        cards: "r24",
+      };
+      break;
+    default:
+      console.log("Nom de joueur non reconnu.");
+              repondre(`joueur: ${joueur} non reconnu`);
+              return; 
+          }   
 
           const colonneObjet = colonnesJoueur[object];
           const solde = `${data[colonneObjet]} ${signe} ${valeur}`;
@@ -1004,7 +1255,57 @@ zokou(
       let texte = arg.slice(5).join(' ');
 
      if (!arg || arg.length === 0) {
-        let mesg = ``;
+        let mesg = `.*𝗪𝗘𝗦𝗧 𝗗𝗜𝗩𝗜𝗦𝗜𝗢𝗡🦁🔵*
+░░░░░░░░░░░░░░░░░░░
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+◇ *Pseudo👤*: Hajime NEXUS🇨🇲
+◇ *Rang XP🔰*: ${data.r1}
+◇ *Golds🧭*: ${data.r2}🧭
+◇ *NEOcoins🔹*: ${data.r3}🔷
+◇ *Gift Box🎁*: ${data.r4}🎁
+◇ *Coupons🎟*: ${data.r5}🎟
+◇ *NEO PASS🔸*: ${data.r6}🔸
+░░░░░░░░░░░░░░
+Note: ⭐1/5
+Records: ${data.r7} Victoires✅/ ${data.r8} Défaites❌
+🏆Trophées: ${data.r9}     🌟TOS: ${data.r10}     💫Awards: ${data.r11}
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+*🎴Cards(15 max)*: ${data.r12}
+░░░░░░░░░░░░░░░░░░░
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+
+◇ *Pseudo👤*: Vanitas GOLD🇸🇳
+◇ *Rang XP🔰*: ${data.r13}
+◇ *Golds🧭*: ${data.r14}🧭
+◇ *NEOcoins🔹*: ${data.r15}🔷
+◇ *Gift Box🎁*: ${data.r16}🎁
+◇ *Coupons🎟*: ${data.r17}🎟
+◇ *NEO PASS🔸*: ${data.r18}🔸
+░░░░░░░░░░░░░░
+Note: ⭐1/5
+Records: ${data.r19} Victoires✅/ ${data.r20} Défaites❌
+🏆Trophées: ${data.r21}     🌟TOS: ${data.r22}     💫Awards: ${data.r23}
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+*🎴Cards(15 max)*: ${data.r24}
+░░░░░░░░░░░░░░░░░░░
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+
+◇ *Pseudo👤*: 
+◇ *Rang XP🔰*: Joueur Classé🎮
+◇ *Golds🧭*: 50.000🧭
+◇ *NEOcoins🔹*: 0🔷
+◇ *Gift Box🎁*: 0🎁
+◇ *Coupons🎟*: 0🎟
+◇ *NEO PASS🔸*: 0🔸
+░░░░░░░░░░░░░░
+Note: ⭐1/5
+Records: 0 Victoires✅/ 0 Défaites❌
+🏆Trophées: 0     🌟TOS: 0     💫Awards: 0
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+*🎴Cards(15 max)*: 
+░░░░░░░░░░░░░░░░░░░
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+         *🔷𝗡Ξ𝗢24🏆🔝*`;
           zk.sendMessage(dest, { image: { url: 'https://i.imgur.com/crAlkxv.jpg' }, caption: mesg }, { quoted: ms });
       } else {
         if (superUser) { 
@@ -1023,7 +1324,44 @@ zokou(
         if (arg[0] === 'joueur:') {
           let colonnesJoueur;
 
-          
+          switch (joueur) {
+    case "Hajime":
+      colonnesJoueur = {
+        rang_xp: "r1",
+        golds: "r2",
+        neocoins: "r3",
+        gift_box: "r4",
+        coupons: "r5",
+        neo_pass: "r6",
+        victoires: "r7",
+        defaites: "r8",
+        trophees: "r9",
+        tos: "r10",
+        awards: "r11",
+        cards: "r12",
+      };
+      break;
+    case "Vanitas":
+      colonnesJoueur = {
+        rang_xp: "r13",
+        golds: "r14",
+        neocoins: "r15",
+        gift_box: "r16",
+        coupons: "r17",
+        neo_pass: "r18",
+        victoires: "r19",
+        defaites: "r20",
+        trophees: "r21",
+        tos: "r22",
+        awards: "r23",
+        cards: "r24",
+      };
+      break;
+    default:
+      console.log("Nom de joueur non reconnu.");
+              repondre(`joueur: ${joueur} non reconnu`);
+              return; 
+          }   
 
           const colonneObjet = colonnesJoueur[object];
           const solde = `${data[colonneObjet]} ${signe} ${valeur}`;
@@ -1158,7 +1496,57 @@ zokou(
       let texte = arg.slice(5).join(' ');
 
      if (!arg || arg.length === 0) {
-        let mesg = ``;
+        let mesg = `.*𝗖𝗘𝗡𝗧𝗥𝗔𝗟 𝗗𝗜𝗩𝗜𝗦𝗜𝗢𝗡🐯🟠*
+░░░░░░░░░░░░░░░░░░░
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+◇ *Pseudo👤*: Zinaya KÏNGS🇬🇳
+◇ *Rang XP🔰*: ${data.r1}
+◇ *Golds🧭*: ${data.r2}🧭
+◇ *NEOcoins🔹*: ${data.r3}🔷
+◇ *Gift Box🎁*: ${data.r4}🎁
+◇ *Coupons🎟*: ${data.r5}🎟
+◇ *NEO PASS🔸*: ${data.r6}🔸
+░░░░░░░░░░░░░░
+Note: ⭐⭐⭐⭐4/5
+Records: ${data.r7} Victoires✅/ ${data.r8} Défaites❌
+🏆Trophées: ${data.r9}     🌟TOS: ${data.r10}     💫Awards: ${data.r11}
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+*🎴Cards(15 max)*: ${data.r12}
+░░░░░░░░░░░░░░░░░░░
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+
+◇ *Pseudo👤*: BADS🇨🇬
+◇ *Rang XP🔰*: ${data.r13}
+◇ *Golds🧭*: ${data.r14}🧭
+◇ *NEOcoins🔹*: ${data.r15}🔷
+◇ *Gift Box🎁*: ${data.r16}🎁
+◇ *Coupons🎟*: ${data.r17}🎟
+◇ *NEO PASS🔸*: ${data.r18}🔸
+░░░░░░░░░░░░░░
+Note: ⭐⭐⭐3/5
+Records: ${data.r19} Victoires✅/ ${data.r20} Défaites❌
+🏆Trophées: ${data.r21}     🌟TOS: ${data.r22}     💫Awards: ${data.r23}
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+*🎴Cards(15 max)*: ${data.r24}
+░░░░░░░░░░░░░░░░░░░
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+
+◇ *Pseudo👤*: TEMPEST🇨🇲
+◇ *Rang XP🔰*: ${data.r25}
+◇ *Golds🧭*: ${data.r26}🧭
+◇ *NEOcoins🔹*: ${data.r27}🔷
+◇ *Gift Box🎁*: ${data.r28}🎁
+◇ *Coupons🎟*: ${data.r29}🎟
+◇ *NEO PASS🔸*: ${data.r30}🔸
+░░░░░░░░░░░░░░
+Note: ⭐1/5
+Records: ${data.r31} Victoires✅/ ${data.r32} Défaites❌
+🏆Trophées: ${data.r33}     🌟TOS: ${data.r34}     💫Awards: ${data.r35}
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+*🎴Cards(15 max)*: ${data.r36}
+░░░░░░░░░░░░░░░░░░░
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+         *🔷𝗡Ξ𝗢24🏆🔝*`;
           zk.sendMessage(dest, { image: { url: 'https://i.imgur.com/H5FiyEQ.jpg' }, caption: mesg }, { quoted: ms });
       } else {
         if (superUser) { 
@@ -1177,7 +1565,60 @@ zokou(
         if (arg[0] === 'joueur:') {
           let colonnesJoueur;
 
-          
+          switch (joueur) {
+    case "Zinaya":
+      colonnesJoueur = {
+        rang_xp: "r1",
+        golds: "r2",
+        neocoins: "r3",
+        gift_box: "r4",
+        coupons: "r5",
+        neo_pass: "r6",
+        victoires: "r7",
+        defaites: "r8",
+        trophees: "r9",
+        tos: "r10",
+        awards: "r11",
+        cards: "r12",
+      };
+      break;
+    case "Bads":
+      colonnesJoueur = {
+        rang_xp: "r13",
+        golds: "r14",
+        neocoins: "r15",
+        gift_box: "r16",
+        coupons: "r17",
+        neo_pass: "r18",
+        victoires: "r19",
+        defaites: "r20",
+        trophees: "r21",
+        tos: "r22",
+        awards: "r23",
+        cards: "r24",
+      };
+      break;
+    case "Tempest":
+      colonnesJoueur = {
+        rang_xp: "r25",
+        golds: "r26",
+        neocoins: "r27",
+        gift_box: "r28",
+        coupons: "r29",
+        neo_pass: "r30",
+        victoires: "r31",
+        defaites: "r32",
+        trophees: "r33",
+        tos: "r34",
+        awards: "r35",
+        cards: "r36",
+      };
+      break;
+    default:
+      console.log("Nom de joueur non reconnu.");
+              repondre(`joueur: ${joueur} non reconnu`);
+              return; 
+          }   
 
           const colonneObjet = colonnesJoueur[object];
           const solde = `${data[colonneObjet]} ${signe} ${valeur}`;
@@ -1234,7 +1675,57 @@ zokou(
       let texte = arg.slice(5).join(' ');
 
      if (!arg || arg.length === 0) {
-        let mesg = ``;
+        let mesg = `.*𝗖𝗘𝗡𝗧𝗥𝗔𝗟 𝗗𝗜𝗩𝗜𝗦𝗜𝗢𝗡🐯🟠*
+░░░░░░░░░░░░░░░░░░░
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+◇ *Pseudo👤*: Covid SAMA🇨🇬
+◇ *Rang XP🔰*: ${data.r1}
+◇ *Golds🧭*: ${data.r2}🧭
+◇ *NEOcoins🔹*: ${data.r3}🔷
+◇ *Gift Box🎁*: ${data.r4}🎁
+◇ *Coupons🎟*: ${data.r5}🎟
+◇ *NEO PASS🔸*: ${data.r6}🔸
+░░░░░░░░░░░░░░
+Note: ⭐⭐2/5
+Records: ${data.r7} Victoires✅/ ${data.r8} Défaites❌
+🏆Trophées: ${data.r9}     🌟TOS: ${data.r10}     💫Awards: ${data.r11}
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+*🎴Cards(15 max)*: ${data.r12}
+░░░░░░░░░░░░░░░░░░░
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+
+◇ *Pseudo👤*: Sofiane GENESIS🇨🇮
+◇ *Rang XP🔰*: ${data.r13}
+◇ *Golds🧭*: ${data.r14}🧭
+◇ *NEOcoins🔹*: ${data.r15}🔷
+◇ *Gift Box🎁*: ${data.r16}🎁
+◇ *Coupons🎟*: ${data.r17}🎟
+◇ *NEO PASS🔸*: ${data.r18}🔸
+░░░░░░░░░░░░░░
+Note: ⭐⭐2/5
+Records: ${data.r19} Victoires✅/ ${data.r20} Défaites❌
+🏆Trophées: ${data.r21}     🌟TOS: ${data.r22}     💫Awards: ${data.r23}
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+*🎴Cards(15 max)*: ${data.r24}
+░░░░░░░░░░░░░░░░░░░
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+
+◇ *Pseudo👤*:  Dark KING🇹🇬
+◇ *Rang XP🔰*: ${data.r25}
+◇ *Golds🧭*: ${data.r26}🧭
+◇ *NEOcoins🔹*: ${data.r27}🔷
+◇ *Gift Box🎁*: ${data.r28}🎁
+◇ *Coupons🎟*: ${data.r29}🎟
+◇ *NEO PASS🔸*: ${data.r30}🔸
+░░░░░░░░░░░░░░
+Note: ⭐1/5
+Records: ${data.r31} Victoires✅/ ${data.r32} Défaites❌
+🏆Trophées: ${data.r33}     🌟TOS: ${data.r34}     💫Awards: ${data.r35}
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+*🎴Cards(15 max)*: ${data.r36}
+░░░░░░░░░░░░░░░░░░░
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+         *🔷𝗡Ξ𝗢24🏆🔝*`;
           zk.sendMessage(dest, { image: { url: 'https://i.imgur.com/H5FiyEQ.jpg' }, caption: mesg }, { quoted: ms });
       } else {
         if (superUser) { 
@@ -1253,7 +1744,60 @@ zokou(
         if (arg[0] === 'joueur:') {
           let colonnesJoueur;
 
-          
+          switch (joueur) {
+    case "Covid":
+      colonnesJoueur = {
+        rang_xp: "r1",
+        golds: "r2",
+        neocoins: "r3",
+        gift_box: "r4",
+        coupons: "r5",
+        neo_pass: "r6",
+        victoires: "r7",
+        defaites: "r8",
+        trophees: "r9",
+        tos: "r10",
+        awards: "r11",
+        cards: "r12",
+      };
+      break;
+    case "Sofiane":
+      colonnesJoueur = {
+        rang_xp: "r13",
+        golds: "r14",
+        neocoins: "r15",
+        gift_box: "r16",
+        coupons: "r17",
+        neo_pass: "r18",
+        victoires: "r19",
+        defaites: "r20",
+        trophees: "r21",
+        tos: "r22",
+        awards: "r23",
+        cards: "r24",
+      };
+      break;
+    case "Dark":
+      colonnesJoueur = {
+        rang_xp: "r25",
+        golds: "r26",
+        neocoins: "r27",
+        gift_box: "r28",
+        coupons: "r29",
+        neo_pass: "r30",
+        victoires: "r31",
+        defaites: "r32",
+        trophees: "r33",
+        tos: "r34",
+        awards: "r35",
+        cards: "r36",
+      };
+      break;
+    default:
+      console.log("Nom de joueur non reconnu.");
+              repondre(`joueur: ${joueur} non reconnu`);
+              return; 
+          }   
 
           const colonneObjet = colonnesJoueur[object];
           const solde = `${data[colonneObjet]} ${signe} ${valeur}`;
@@ -1310,7 +1854,57 @@ zokou(
       let texte = arg.slice(5).join(' ');
 
      if (!arg || arg.length === 0) {
-        let mesg = ``;
+        let mesg = `.*𝗖𝗘𝗡𝗧𝗥𝗔𝗟 𝗗𝗜𝗩𝗜𝗦𝗜𝗢𝗡🐯🟠*
+░░░░░░░░░░░░░░░░░░░
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+◇ *Pseudo👤*: ABDIEL🇹🇬
+◇ *Rang XP🔰*: ${data.r1}
+◇ *Golds🧭*: ${data.r2}🧭
+◇ *NEOcoins🔹*: ${data.r3}🔷
+◇ *Gift Box🎁*: ${data.r4}🎁
+◇ *Coupons🎟*: ${data.r5}🎟
+◇ *NEO PASS🔸*: ${data.r6}🔸
+░░░░░░░░░░░░░░
+Note: ⭐1/5
+Records: ${data.r7} Victoires✅/ ${data.r8} Défaites❌
+🏆Trophées: ${data.r9}     🌟TOS: ${data.r10}     💫Awards: ${data.r11}
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+*🎴Cards(15 max)*: ${data.r12}
+░░░░░░░░░░░░░░░░░░░
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+
+◇ *Pseudo👤*: O'Neal AKIRA🇨🇲
+◇ *Rang XP🔰*: ${data.r13}
+◇ *Golds🧭*: ${data.r14}🧭
+◇ *NEOcoins🔹*: ${data.r15}🔷
+◇ *Gift Box🎁*: ${data.r16}🎁
+◇ *Coupons🎟*: ${data.r17}🎟
+◇ *NEO PASS🔸*: ${data.r18}🔸
+░░░░░░░░░░░░░░
+Note: ⭐1/5
+Records: ${data.r19} Victoires✅/ ${data.r20} Défaites❌
+🏆Trophées: ${data.r21}     🌟TOS: ${data.r22}     💫Awards: ${data.r23}
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+*🎴Cards(15 max)*: ${data.r24}
+░░░░░░░░░░░░░░░░░░░
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+
+◇ *Pseudo👤*: 
+◇ *Rang XP🔰*: Joueur Classé🎮
+◇ *Golds🧭*: 50.000🧭
+◇ *NEOcoins🔹*: 0🔷
+◇ *Gift Box🎁*: 0🎁
+◇ *Coupons🎟*: 0🎟
+◇ *NEO PASS🔸*: 0🔸
+░░░░░░░░░░░░░░
+Note: ⭐1/5
+Records: 0 Victoires✅/ 0 Défaites❌
+🏆Trophées: 0     🌟TOS: 0     💫Awards: 0
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+*🎴Cards(15 max)*: 
+░░░░░░░░░░░░░░░░░░░
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+         *🔷𝗡Ξ𝗢24🏆🔝*`;
           zk.sendMessage(dest, { image: { url: 'https://i.imgur.com/H5FiyEQ.jpg' }, caption: mesg }, { quoted: ms });
       } else {
         if (superUser) { 
@@ -1329,7 +1923,44 @@ zokou(
         if (arg[0] === 'joueur:') {
           let colonnesJoueur;
 
-          
+          switch (joueur) {
+    case "Abdiel":
+      colonnesJoueur = {
+        rang_xp: "r1",
+        golds: "r2",
+        neocoins: "r3",
+        gift_box: "r4",
+        coupons: "r5",
+        neo_pass: "r6",
+        victoires: "r7",
+        defaites: "r8",
+        trophees: "r9",
+        tos: "r10",
+        awards: "r11",
+        cards: "r12",
+      };
+      break;
+    case "O'Neal":
+      colonnesJoueur = {
+        rang_xp: "r13",
+        golds: "r14",
+        neocoins: "r15",
+        gift_box: "r16",
+        coupons: "r17",
+        neo_pass: "r18",
+        victoires: "r19",
+        defaites: "r20",
+        trophees: "r21",
+        tos: "r22",
+        awards: "r23",
+        cards: "r24",
+      };
+      break;
+    default:
+      console.log("Nom de joueur non reconnu.");
+              repondre(`joueur: ${joueur} non reconnu`);
+              return; 
+          }   
 
           const colonneObjet = colonnesJoueur[object];
           const solde = `${data[colonneObjet]} ${signe} ${valeur}`;
