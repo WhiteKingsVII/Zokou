@@ -21,7 +21,7 @@ zokou(
     const { ms, repondre, arg, superUser } = commandeOptions;
 
     try {
-      const data = await getData();
+      const data = await getData1();
       let joueur = arg[1];
       let object = arg[3];
       let signe = arg[4];
@@ -185,7 +185,7 @@ zokou(
     const { ms, repondre, arg, superUser } = commandeOptions;
 
     try {
-      const data = await getData();
+      const data = await getData2();
       let joueur = arg[1];
       let object = arg[3];
       let signe = arg[4];
@@ -193,7 +193,57 @@ zokou(
       let texte = arg.slice(5).join(' ');
 
      if (!arg || arg.length === 0) {
-        let mesg = ``;
+        let mesg = `.*𝗡𝗢𝗥𝗧𝗛 𝗗𝗜𝗩𝗜𝗦𝗜𝗢𝗡🐺🔴*
+░░░░░░░░░░░░░░░░░░░
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+◇ *Pseudo👤*: Lord A. KÏNGS🇹🇬
+◇ *Rang XP🔰*: ${data.r1}
+◇ *Golds🧭*: ${data.r2}🧭
+◇ *NEOcoins🔹*: ${data.r3}🔷
+◇ *Gift Box🎁*: ${data.r4}🎁
+◇ *Coupons🎟*: ${data.r5}🎟
+◇ *NEO PASS🔸*: ${data.r6}🔸
+░░░░░░░░░░░░░░
+Note: ⭐⭐⭐3/5
+Records: ${data.r7} Victoires✅/ ${data.r8} Défaites❌
+🏆Trophées: ${data.r9}     🌟TOS: ${data.r10}     💫Awards: ${data.r11}
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+*🎴Cards(15 max)*: ${data.r12}
+░░░░░░░░░░░░░░░░░░░
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+
+◇ *Pseudo👤*: Ainz OG KÏNGS🇧🇫
+◇ *Rang XP🔰*: ${data.r13}
+◇ *Golds🧭*: ${data.r14}🧭
+◇ *NEOcoins🔹*: ${data.r15}🔷
+◇ *Gift Box🎁*: ${data.r16}🎁
+◇ *Coupons🎟*: ${data.r17}🎟
+◇ *NEO PASS🔸*: ${data.r18}🔸
+░░░░░░░░░░░░░░
+Note: ⭐1/5
+Records: ${data.r19} Victoires✅/ ${data.r20} Défaites❌
+🏆Trophées: ${data.r21}     🌟TOS: ${data.r22}     💫Awards: ${data.r23}
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+*🎴Cards(15 max)*: ${data.r24}
+░░░░░░░░░░░░░░░░░░░
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+
+◇ *Pseudo👤*: Seijin YUJI🇸🇳
+◇ *Rang XP🔰*: ${data.r25}
+◇ *Golds🧭*: ${data.r26}🧭
+◇ *NEOcoins🔹*: ${data.r27}🔷
+◇ *Gift Box🎁*: ${data.r28}🎁
+◇ *Coupons🎟*: ${data.r29}🎟
+◇ *NEO PASS🔸*: ${data.r30}🔸
+░░░░░░░░░░░░░░
+Note: ⭐⭐2/5
+Records: ${data.r31} Victoires✅/ ${data.r32} Défaites❌
+🏆Trophées: ${data.r33}     🌟TOS: ${data.r34}     💫Awards: ${data.r35}
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+*🎴Cards(15 max)*: ${data.r36}
+░░░░░░░░░░░░░░░░░░░
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+         *◁🔷𝗡𝗘𝗢 𝗙𝗢𝗥 𝗧𝗛𝗘 𝗣𝗟𝗔𝗬𝗘𝗥𝗦🎮➕ᐅᐭ*`;
           zk.sendMessage(dest, { image: { url: 'https://i.imgur.com/UP1ubll.jpg' }, caption: mesg }, { quoted: ms });
       } else {
         if (superUser) { 
@@ -262,7 +312,7 @@ zokou(
     const { ms, repondre, arg, superUser } = commandeOptions;
 
     try {
-      const data = await getData();
+      const data = await getData3();
       let joueur = arg[1];
       let object = arg[3];
       let signe = arg[4];
@@ -270,7 +320,57 @@ zokou(
       let texte = arg.slice(5).join(' ');
 
      if (!arg || arg.length === 0) {
-        let mesg = ``;
+        let mesg = `.*NORTH DIVISION🐺🔴
+░░░░░░░░░░░░░░░░░░░
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+◇ *Pseudo👤*: Thanatos Gold King🇧🇫
+◇ *Rang XP🔰*: {data.r1}
+◇ *Golds🧭*: {data.r2}🧭
+◇ *NEOcoins🔹*: {data.r3}🔷
+◇ *Gift Box🎁*: {data.r4}🎁
+◇ *Coupons🎟️*: {data.r5}🎟️
+◇ *NEO PASS🔸*: {data.r6}🔸
+░░░░░░░░░░░░░░
+*Note*: ⭐1/5
+*Records*: {data.r7} Victoires✅/ {data.r8} Défaites❌
+*🏆Trophées*: {data.r9} *🌟TOS*: {data.r10} *💫Awards*: {data.r11}
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+*🎴Cards(15 max)*: {data.r12}
+░░░░░░░░░░░░░░░░░░░
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+
+◇ *Pseudo👤*: Adorieru🇹🇬
+◇ *Rang XP🔰*: {data.r13}
+◇ *Golds🧭*: {data.r14}🧭
+◇ *NEOcoins🔹*: {data.r15}🔷
+◇ *Gift Box🎁*: {data.r16}🎁
+◇ *Coupons🎟️*: {data.r17}🎟️
+◇ *NEO PASS🔸*: {data.r18}🔸
+░░░░░░░░░░░░░░
+*Note*: ⭐1/5
+*Records*: {data.r19} Victoires✅/ {data.r20}  Défaites❌
+*🏆Trophées*: {data.r21} *🌟TOS*: {data.r22} *💫Awards*: {data.r23}
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+*🎴Cards(15 max)*: {data.r24}
+░░░░░░░░░░░░░░░░░░░
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+
+◇ *Pseudo👤*: 
+◇ *Rang XP🔰*: Joueur Classé🎮
+◇ *Golds🧭*: 50.000🧭
+◇ *NEOcoins🔹*: 0🔷
+◇ *Gift Box🎁*: 0🎁
+◇ *Coupons🎟️*: 0🎟️
+◇ *NEO PASS🔸*: 0🔸
+░░░░░░░░░░░░░░
+*Note*: ⭐1/5
+*Records*: 0 Victoires✅/ 0 Défaites❌
+*🏆Trophées*: 0 *🌟TOS*: 0 *💫Awards*: 0
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+*🎴Cards(15 max)*: 
+░░░░░░░░░░░░░░░░░░░
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+ *🔷𝗡Ξ𝗢24🏆🔝*`;
           zk.sendMessage(dest, { image: { url: 'https://i.imgur.com/UP1ubll.jpg' }, caption: mesg }, { quoted: ms });
       } else {
         if (superUser) { 
@@ -339,7 +439,7 @@ zokou(
     const { ms, repondre, arg, superUser } = commandeOptions;
 
     try {
-      const data = await getData();
+      const data = await getData4();
       let joueur = arg[1];
       let object = arg[3];
       let signe = arg[4];
@@ -347,7 +447,58 @@ zokou(
       let texte = arg.slice(5).join(' ');
 
      if (!arg || arg.length === 0) {
-        let mesg = ``;
+        let mesg = `.* 𝗘𝗔𝗦𝗧 𝗗𝗜𝗩𝗜𝗦𝗜𝗢𝗡🦅🟢*
+░░░░░░░░░░░░░░░░░░░
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+◇ *Pseudo👤*: Atsushi KÏNGS🇨🇲 
+◇ *Rang XP🔰*: ${data.r1}
+◇ *Golds🧭*: ${data.r2}🧭
+◇ *NEOcoins🔹*: ${data.r3}🔷
+◇ *Gift Box🎁*: ${data.r4}🎁
+◇ *Coupons🎟️*: ${data r5}🎟️
+◇ *NEO PASS🔸*: ${data.r6}🔸
+░░░░░░░░░░░░░░
+*Note*: ⭐1/5
+*Records*: ${data.r7} Victoires✅/ ${data.r8} Défaites❌
+*🏆Trophées*: ${data.r9} *🌟TOS*: ${data.r10} *💫Awards*: ${data.r11}
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+*🎴Cards(15 max)*: ${data.r12} 
+░░░░░░░░░░░░░░░░░░░
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+
+◇ *Pseudo👤*: White KÏNGS🇨🇮 
+◇ *Rang XP🔰*: ${datat.r13}
+◇ *Golds🧭*: ${data.r14}🧭
+◇ *NEOcoins🔹*: ${data.r15}🔷
+◇ *Gift Box🎁*: ${data.r16}🎁
+◇ *Coupons🎟️*: ${data.r17}🎟️
+◇ *NEO PASS🔸*: ${data.r18}🔸
+░░░░░░░░░░░░░░
+*Note*: ⭐⭐⭐⭐4/5
+*Records*: ${data.r19} Victoires✅/ ${data.r20} Défaites❌
+*🏆Trophées*: ${data.r21} *🌟TOS*: ${data.r22} *💫Awards*: ${data.r23}
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+*🎴Cards(15 max)*: ${data.r24} 
+░░░░░░░░░░░░░░░░░░░
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+
+◇ *Pseudo👤*: Kemael🇨🇮
+◇ *Rang XP🔰*: ${data.r25}
+◇ *Golds🧭*: ${data.r26}🧭
+◇ *NEOcoins🔹*: ${data.r27}🔷
+◇ *Gift Box🎁*: ${data.r28}🎁
+◇ *Coupons🎟️*: ${data.r29}🎟️
+◇ *NEO PASS🔸*: ${data.r30}🔸
+░░░░░░░░░░░░░░
+*Note*: ⭐⭐2.5/5
+*Records*: ${data.r31} Victoires✅/ ${data.r32} Défaites❌
+*🏆Trophées*: ${data.r33} *🌟TOS*: ${data.r34} *💫Awards*: ${data.r35}
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+*🎴Cards(15 max)*: ${data.r36}
+░░░░░░░░░░░░░░░░░░░
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+        *◁🔷𝗡𝗘𝗢 𝗙𝗢𝗥 𝗧𝗛𝗘 𝗣𝗟𝗔𝗬𝗘𝗥𝗦🎮➕ᐅᐭ
+*`;
           zk.sendMessage(dest, { image: { url: 'https://i.imgur.com/EashJkj.jpg' }, caption: mesg }, { quoted: ms });
       } else {
         if (superUser) { 
@@ -416,7 +567,7 @@ zokou(
     const { ms, repondre, arg, superUser } = commandeOptions;
 
     try {
-      const data = await getData();
+      const data = await getData5();
       let joueur = arg[1];
       let object = arg[3];
       let signe = arg[4];
@@ -424,7 +575,58 @@ zokou(
       let texte = arg.slice(5).join(' ');
 
      if (!arg || arg.length === 0) {
-        let mesg = ``;
+        let mesg = `.*𝗘𝗔𝗦𝗧 𝗗𝗜𝗩𝗜𝗦𝗜𝗢𝗡🦅🟢*
+░░░░░░░░░░░░░░░░░░░
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+◇ *Pseudo👤*: Hinata Hyuga🇮🇪
+◇ *Rang XP🔰*: ${data.r1}
+◇ *Golds🧭*: ${data.r2}🧭
+◇ *NEOcoins🔹*: ${data.r3}🔷
+◇ *Gift Box🎁*: ${data.r4}🎁
+◇ *Coupons🎟️*: ${data.r5}🎟️
+◇ *NEO PASS🔸*: ${data.r6}🔸
+░░░░░░░░░░░░░░
+*Note*: ⭐1/5
+*Records*: ${data.r7} Victoires✅/ ${data.r8} Défaites❌
+*🏆Trophées*: ${data.r9} *🌟TOS*: ${data.r10} *💫Awards*: ${data.r11}
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+*🎴Cards(15 max)*: ${data.r12}
+░░░░░░░░░░░░░░░░░░░
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+
+◇ *Pseudo👤*: Goldy Shogun🇹🇬
+◇ *Rang XP🔰*: ${data.r13}
+◇ *Golds🧭*: ${data.r14}🧭
+◇ *NEOcoins🔹*: ${data.r15}🔷
+◇ *Gift Box🎁*: ${data.r16}🎁
+◇ *Coupons🎟️*: ${data.r17}🎟️
+◇ *NEO PASS🔸*: ${data.r18}🔸
+░░░░░░░░░░░░░░
+*Note*: ⭐⭐2/5
+*Records*: ${data.r19} Victoires✅/ ${data.r20} Défaites❌
+*🏆Trophées*: ${data.r21} *🌟TOS*: ${data.r22} *💫Awards*: ${data.r23}
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+*🎴Cards(15 max)*: ${data.r24}
+░░░░░░░░░░░░░░░░░░░
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+
+◇ *Pseudo👤*: Utsune Infinity🇨🇲
+◇ *Rang XP🔰*: {data.r25}
+◇ *Golds🧭*: {data.r26}🧭
+◇ *NEOcoins🔹*: {data.r27}🔷
+◇ *Gift Box🎁*: {data.r28}🎁
+◇ *Coupons🎟️*: {data.r29}🎟️
+◇ *NEO PASS🔸*: {data.r30}🔸
+░░░░░░░░░░░░░░
+*Note*: ⭐1/5
+*Records*: {data.r31} Victoires✅/ {data.r32} Défaites❌
+*🏆Trophées*: {data.r33} *🌟TOS*: {data.r34} *💫Awards*: {data.r35}
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+*🎴Cards(15 max)*: {data.r36}
+░░░░░░░░░░░░░░░░░░░
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+        *◁🔷𝗡𝗘𝗢 𝗙𝗢𝗥 𝗧𝗛𝗘 𝗣𝗟𝗔𝗬𝗘𝗥𝗦🎮➕ᐅᐭ
+*`;
           zk.sendMessage(dest, { image: { url: 'https://i.imgur.com/EashJkj.jpg' }, caption: mesg }, { quoted: ms });
       } else {
         if (superUser) { 
@@ -492,7 +694,7 @@ zokou(
     const { ms, repondre, arg, superUser } = commandeOptions;
 
     try {
-      const data = await getData();
+      const data = await getData6();
       let joueur = arg[1];
       let object = arg[3];
       let signe = arg[4];
@@ -500,7 +702,57 @@ zokou(
       let texte = arg.slice(5).join(' ');
 
      if (!arg || arg.length === 0) {
-        let mesg = ``;
+        let mesg = `.*𝗘𝗔𝗦𝗧 𝗗𝗜𝗩𝗜𝗦𝗜𝗢𝗡🦅🟢*
+░░░░░░░░░░░░░░░░░░░
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+◇ *Pseudo👤*: Adam GENESIS🇨🇮
+◇ *Rang XP🔰*: ${data.r1}
+◇ *Golds🧭*: ${data.r2}🧭
+◇ *NEOcoins🔹*: ${data.r3}🔷
+◇ *Gift Box🎁*: ${data.r4}🎁
+◇ *Coupons🎟️*: ${data.r5}🎟️
+◇ *NEO PASS🔸*: ${data.r6}🔸
+░░░░░░░░░░░░░░
+*Note*: ⭐1/5
+*Records*: ${data.r7} Victoires✅/ ${data.r8} Défaites❌
+*🏆Trophées*: ${data.r9} *🌟TOS*: ${data.r10} *💫Awards*: ${data.r11}
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+*🎴Cards(15 max)*: ${data.r12}
+░░░░░░░░░░░░░░░░░░░
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+
+◇ *Pseudo👤*: Altheos AETHERIA🇨🇮
+◇ *Rang XP🔰*: ${data.r13}
+◇ *Golds🧭*: ${data.r14}🧭
+◇ *NEOcoins🔹*: ${data.r15}🔷
+◇ *Gift Box🎁*: ${data.r16}🎁
+◇ *Coupons🎟️*: ${data.r17}🎟️
+◇ *NEO PASS🔸*: ${data.r18}🔸
+░░░░░░░░░░░░░░
+*Note*: ⭐⭐2/5
+*Records*: ${data.r19} Victoires✅/ ${data.r20} Défaites❌
+*🏆Trophées*: ${data.r21} *🌟TOS*: ${data.r22} *💫Awards*: ${data.r23}
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+*🎴Cards(15 max)*: ${data.r24}
+░░░░░░░░░░░░░░░░░░░
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+
+◇ *Pseudo👤*: 
+◇ *Rang XP🔰*: Joueur Classé🎮
+◇ *Golds🧭*:50.000🧭
+◇ *NEOcoins🔹*: 0🔷
+◇ *Gift Box🎁*: 0🎁
+◇ *Coupons🎟️*: 0🎟️
+◇ *NEO PASS🔸*: 0🔸
+░░░░░░░░░░░░░░
+*Note*: ⭐1/5
+*Records*: 0 Victoires✅/ 0 Défaites❌
+*🏆Trophées*: 0 *🌟TOS*: 0 *💫Awards*: 0
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+*🎴Cards(15 max)*: 
+░░░░░░░░░░░░░░░░░░░
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+        *🔷𝗡Ξ𝗢24🏆🔝*`;
           zk.sendMessage(dest, { image: { url: 'https://i.imgur.com/EashJkj.jpg' }, caption: mesg }, { quoted: ms });
       } else {
         if (superUser) { 
@@ -576,7 +828,107 @@ zokou(
       let texte = arg.slice(5).join(' ');
 
      if (!arg || arg.length === 0) {
-        let mesg = ``;
+        let mesg = `.*𝗪𝗘𝗦𝗧 𝗗𝗜𝗩𝗜𝗦𝗜𝗢𝗡🦁🔵*
+░░░░░░░░░░░░░░░░░░░
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+◇ *Pseudo👤*: Æther GENESIS🇬🇦
+◇ *Rang XP🔰*: ${data.r1}
+◇ *Golds🧭*: ${data.r2}🧭
+◇ *NEOcoins🔹*: ${data.r3}🔷
+◇ *Gift Box🎁*: ${data.r4}🎁
+◇ *Coupons🎟️*: ${data.r5}🎟️
+◇ *NEO PASS🔸*: ${data.r6}🔸
+░░░░░░░░░░░░░░
+*Note*: ⭐⭐⭐⭐4,5/5
+*Records*: ${data.r7} Victoires✅/ ${data.r8} Défaites❌
+*🏆Trophées*: ${data.r9}     *🌟TOS*: ${data.r10}     *💫Awards*: ${data.r11}
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+*🎴Cards(15 max)*: ${data.r12}
+░░░░░░░░░░░░░░░░░░░
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+
+◇ *Pseudo👤*: SoloMoe Astral KÏNGS🇸🇳
+◇ *Rang XP🔰*: ${data.r13}
+◇ *Golds🧭*: ${data.r14}🧭
+◇ *NEOcoins🔹*: ${data.r15}🔷
+◇ *Gift Box🎁*: ${data.r16}🎁
+◇ *Coupons🎟️*: ${data.r17}🎟️
+◇ *NEO PASS🔸*: ${data.r18}🔸
+░░░░░░░░░░░░░░
+*Note*: ⭐⭐⭐3.5/5
+*Records*: ${data.r19} Victoires✅/ ${data.r20} Défaites❌
+*🏆Trophées*: ${data.r21}     *🌟TOS*: ${data.r22}     *💫Awards*: ${data.r23}
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+*🎴Cards(15 max)*: ${data.r24}
+░░░░░░░░░░░░░░░░░░░
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+
+◇ *Pseudo👤*: 
+◇ *Rang XP🔰*: Joueur Classé🎮
+◇ *Golds🧭*: 50.000🧭
+◇ *NEOcoins🔹*: 0🔷
+◇ *Gift Box🎁*: 0🎁
+◇ *Coupons🎟️*: 0🎟️
+◇ *NEO PASS🔸*: 0🔸
+░░░░░░░░░░░░░░
+*Note*: ⭐⭐⭐3.5/5
+*Records*: 00 Victoires✅/ 00 Défaites❌
+*🏆Trophées*: 0 *🌟TOS*: 0  *💫Awards*: 0
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+*🎴Cards(15 max)*:
+░░░░░░░░░░░░░░░░░░░
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+       .*𝗘𝗔𝗦𝗧 𝗗𝗜𝗩𝗜𝗦𝗜𝗢𝗡🦅🟢*
+░░░░░░░░░░░░░░░░░░░
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+◇ *Pseudo👤*: Adam GENESIS🇨🇮
+◇ *Rang XP🔰*: ${data.r1}
+◇ *Golds🧭*: ${data.r2}🧭
+◇ *NEOcoins🔹*: ${data.r3}🔷
+◇ *Gift Box🎁*: ${data.r4}🎁
+◇ *Coupons🎟️*: ${data.r5}🎟️
+◇ *NEO PASS🔸*: ${data.r6}🔸
+░░░░░░░░░░░░░░
+*Note*: ⭐1/5
+*Records*: ${data.r7} Victoires✅/ ${data.r8} Défaites❌
+*🏆Trophées*: ${data.r9} *🌟TOS*: ${data.r10} *💫Awards*: ${data.r11}
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+*🎴Cards(15 max)*: ${data.r12}
+░░░░░░░░░░░░░░░░░░░
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+
+◇ *Pseudo👤*: Altheos AETHERIA🇨🇮
+◇ *Rang XP🔰*: ${data.r13}
+◇ *Golds🧭*: ${data.r14}🧭
+◇ *NEOcoins🔹*: ${data.r15}🔷
+◇ *Gift Box🎁*: ${data.r16}🎁
+◇ *Coupons🎟️*: ${data.r17}🎟️
+◇ *NEO PASS🔸*: ${data.r18}🔸
+░░░░░░░░░░░░░░
+*Note*: ⭐⭐2/5
+*Records*: ${data.r19} Victoires✅/ ${data.r20} Défaites❌
+*🏆Trophées*: ${data.r21} *🌟TOS*: ${data.r22} *💫Awards*: ${data.r23}
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+*🎴Cards(15 max)*: ${data.r24}
+░░░░░░░░░░░░░░░░░░░
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+
+◇ *Pseudo👤*: 
+◇ *Rang XP🔰*: Joueur Classé🎮
+◇ *Golds🧭*:50.000🧭
+◇ *NEOcoins🔹*: 0🔷
+◇ *Gift Box🎁*: 0🎁
+◇ *Coupons🎟️*: 0🎟️
+◇ *NEO PASS🔸*: 0🔸
+░░░░░░░░░░░░░░
+*Note*: ⭐1/5
+*Records*: 0 Victoires✅/ 0 Défaites❌
+*🏆Trophées*: 0 *🌟TOS*: 0 *💫Awards*: 0
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+*🎴Cards(15 max)*: 
+░░░░░░░░░░░░░░░░░░░
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+         *🔷𝗡Ξ𝗢24🏆🔝*`;
           zk.sendMessage(dest, { image: { url: 'https://i.imgur.com/crAlkxv.jpg' }, caption: mesg }, { quoted: ms });
       } else {
         if (superUser) { 
