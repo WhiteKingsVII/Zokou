@@ -91,6 +91,21 @@ async function getData() {
   const client = await pool.connect();
 
   try {
+   const query = 'SELECT r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, r13, r14, r15, r16, r17, r18, r19, r20, r21, r22, r23, r24, r25, r26, r27, r28, r29, r30, r31, r32, r33, r34, r35, r36 FROM alfiche WHERE id = 1';
+    const result = await client.query(query);
+
+    return result.rows[0];
+  } catch (error) {
+    console.error('Erreur lors de la récupération des données:', error);
+  } finally {
+    client.release();
+  }
+}
+
+async function getData() {
+  const client = await pool.connect();
+
+  try {
    const query = 'SELECT r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, r13, r14, r15, r16, r17, r18, r19, r20, r21, r22, r23, r24, r25, r26, r27, r28, r29, r30, r31, r32, r33, r34, r35, r36 FROM alfiche WHERE id =1';
     const result = await client.query(query);
 
@@ -102,6 +117,215 @@ async function getData() {
   }
 }
 
+async function getData1() {
+  const client = await pool.connect();
+
+  try {
+   const query = 'SELECT r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, r13, r14, r15, r16, r17, r18, r19, r20, r21, r22, r23, r24, r25, r26, r27, r28, r29, r30, r31, r32, r33, r34, r35, r36 FROM alfiche WHERE id =1';
+    const result = await client.query(query);
+
+    return result.rows[0];
+  } catch (error) {
+    console.error('Erreur lors de la récupération des données:', error);
+  } finally {
+    client.release();
+  }
+}
+
+async function getData2() {
+  const client = await pool.connect();
+
+  try {
+   const query = 'SELECT r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, r13, r14, r15, r16, r17, r18, r19, r20, r21, r22, r23, r24, r25, r26, r27, r28, r29, r30, r31, r32, r33, r34, r35, r36 FROM alfiche WHERE id = 2';
+    const result = await client.query(query);
+
+    return result.rows[0];
+  } catch (error) {
+    console.error('Erreur lors de la récupération des données:', error);
+  } finally {
+    client.release();
+  }
+}
+
+async function getData3() {
+  const client = await pool.connect();
+
+  try {
+   const query = 'SELECT r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, r13, r14, r15, r16, r17, r18, r19, r20, r21, r22, r23, r24, r25, r26, r27, r28, r29, r30, r31, r32, r33, r34, r35, r36 FROM alfiche WHERE id = 3';
+    const result = await client.query(query);
+
+    return result.rows[0];
+  } catch (error) {
+    console.error('Erreur lors de la récupération des données:', error);
+  } finally {
+    client.release();
+  }
+}
+
+async function getData() {
+  const client = await pool.connect();
+
+  try {
+   const query = 'SELECT r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, r13, r14, r15, r16, r17, r18, r19, r20, r21, r22, r23, r24, r25, r26, r27, r28, r29, r30, r31, r32, r33, r34, r35, r36 FROM alfiche WHERE id = 4';
+    const result = await client.query(query);
+
+    return result.rows[0];
+  } catch (error) {
+    console.error('Erreur lors de la récupération des données:', error);
+  } finally {
+    client.release();
+  }
+}
+
+async function getData() {
+  const client = await pool.connect();
+
+  try {
+   const query = 'SELECT r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, r13, r14, r15, r16, r17, r18, r19, r20, r21, r22, r23, r24, r25, r26, r27, r28, r29, r30, r31, r32, r33, r34, r35, r36 FROM alfiche WHERE id = 5';
+    const result = await client.query(query);
+
+    return result.rows[0];
+  } catch (error) {
+    console.error('Erreur lors de la récupération des données:', error);
+  } finally {
+    client.release();
+  }
+}
+
+async function getData() {
+  const client = await pool.connect();
+
+  try {
+   const query = 'SELECT r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, r13, r14, r15, r16, r17, r18, r19, r20, r21, r22, r23, r24, r25, r26, r27, r28, r29, r30, r31, r32, r33, r34, r35, r36 FROM alfiche WHERE id = 6';
+    const result = await client.query(query);
+
+    return result.rows[0];
+  } catch (error) {
+    console.error('Erreur lors de la récupération des données:', error);
+  } finally {
+    client.release();
+  }
+}
+
+async function getData() {
+  const client = await pool.connect();
+
+  try {
+   const query = 'SELECT r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, r13, r14, r15, r16, r17, r18, r19, r20, r21, r22, r23, r24, r25, r26, r27, r28, r29, r30, r31, r32, r33, r34, r35, r36 FROM alfiche WHERE id = 7';
+    const result = await client.query(query);
+
+    return result.rows[0];
+  } catch (error) {
+    console.error('Erreur lors de la récupération des données:', error);
+  } finally {
+    client.release();
+  }
+}
+
+async function getData() {
+  const client = await pool.connect();
+
+  try {
+   const query = 'SELECT r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, r13, r14, r15, r16, r17, r18, r19, r20, r21, r22, r23, r24, r25, r26, r27, r28, r29, r30, r31, r32, r33, r34, r35, r36 FROM alfiche WHERE id = 8';
+    const result = await client.query(query);
+
+    return result.rows[0];
+  } catch (error) {
+    console.error('Erreur lors de la récupération des données:', error);
+  } finally {
+    client.release();
+  }
+}
+
+async function getData() {
+  const client = await pool.connect();
+
+  try {
+   const query = 'SELECT r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, r13, r14, r15, r16, r17, r18, r19, r20, r21, r22, r23, r24, r25, r26, r27, r28, r29, r30, r31, r32, r33, r34, r35, r36 FROM alfiche WHERE id = 9';
+    const result = await client.query(query);
+
+    return result.rows[0];
+  } catch (error) {
+    console.error('Erreur lors de la récupération des données:', error);
+  } finally {
+    client.release();
+  }
+}
+
+async function getData() {
+  const client = await pool.connect();
+
+  try {
+   const query = 'SELECT r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, r13, r14, r15, r16, r17, r18, r19, r20, r21, r22, r23, r24, r25, r26, r27, r28, r29, r30, r31, r32, r33, r34, r35, r36 FROM alfiche WHERE id = 10';
+    const result = await client.query(query);
+
+    return result.rows[0];
+  } catch (error) {
+    console.error('Erreur lors de la récupération des données:', error);
+  } finally {
+    client.release();
+  }
+}
+
+async function getData() {
+  const client = await pool.connect();
+
+  try {
+   const query = 'SELECT r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, r13, r14, r15, r16, r17, r18, r19, r20, r21, r22, r23, r24, r25, r26, r27, r28, r29, r30, r31, r32, r33, r34, r35, r36 FROM alfiche WHERE id = 11';
+    const result = await client.query(query);
+
+    return result.rows[0];
+  } catch (error) {
+    console.error('Erreur lors de la récupération des données:', error);
+  } finally {
+    client.release();
+  }
+}
+
+async function getData() {
+  const client = await pool.connect();
+
+  try {
+   const query = 'SELECT r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, r13, r14, r15, r16, r17, r18, r19, r20, r21, r22, r23, r24, r25, r26, r27, r28, r29, r30, r31, r32, r33, r34, r35, r36 FROM alfiche WHERE id = 12';
+    const result = await client.query(query);
+
+    return result.rows[0];
+  } catch (error) {
+    console.error('Erreur lors de la récupération des données:', error);
+  } finally {
+    client.release();
+  }
+}
+
+async function getData() {
+  const client = await pool.connect();
+
+  try {
+   const query = 'SELECT r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, r13, r14, r15, r16, r17, r18, r19, r20, r21, r22, r23, r24, r25, r26, r27, r28, r29, r30, r31, r32, r33, r34, r35, r36 FROM alfiche WHERE id =1';
+    const result = await client.query(query);
+
+    return result.rows[0];
+  } catch (error) {
+    console.error('Erreur lors de la récupération des données:', error);
+  } finally {
+    client.release();
+  }
+}
+
+async function getData() {
+  const client = await pool.connect();
+
+  try {
+   const query = 'SELECT r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, r13, r14, r15, r16, r17, r18, r19, r20, r21, r22, r23, r24, r25, r26, r27, r28, r29, r30, r31, r32, r33, r34, r35, r36 FROM alfiche WHERE id =1';
+    const result = await client.query(query);
+
+    return result.rows[0];
+  } catch (error) {
+    console.error('Erreur lors de la récupération des données:', error);
+  } finally {
+    client.release();
+  }
+}
 // Appeler la fonction createNorth1FicheTable après la création de la table
 createNorth1FicheTable();
 insertData();
