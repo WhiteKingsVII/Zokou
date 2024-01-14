@@ -377,34 +377,34 @@ zokou(
 ░░░░░░░░░░░░░░░░░░░
 ▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
 ◇ *Pseudo👤*: Thanatos Gold King🇧🇫
-◇ *Rang XP🔰*: {data.r1}
-◇ *Golds🧭*: {data.r2}🧭
-◇ *NEOcoins🔹*: {data.r3}🔷
-◇ *Gift Box🎁*: {data.r4}🎁
-◇ *Coupons🎟️*: {data.r5}🎟️
-◇ *NEO PASS🔸*: {data.r6}🔸
+◇ *Rang XP🔰*: ${data.r1}
+◇ *Golds🧭*: ${data.r2}🧭
+◇ *NEOcoins🔹*: ${data.r3}🔷
+◇ *Gift Box🎁*: ${data.r4}🎁
+◇ *Coupons🎟️*: ${data.r5}🎟️
+◇ *NEO PASS🔸*: ${data.r6}🔸
 ░░░░░░░░░░░░░░
 *Note*: ⭐1/5
-*Records*: {data.r7} Victoires✅/ {data.r8} Défaites❌
-*🏆Trophées*: {data.r9} *🌟TOS*: {data.r10} *💫Awards*: {data.r11}
+*Records*: ${data.r7} Victoires✅/ ${data.r8} Défaites❌
+*🏆Trophées*: ${data.r9} *🌟TOS*: ${data.r10} *💫Awards*: ${data.r11}
 ▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
-*🎴Cards(15 max)*: {data.r12}
+*🎴Cards(15 max)*: ${data.r12}
 ░░░░░░░░░░░░░░░░░░░
 ▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
 
 ◇ *Pseudo👤*: Adorieru🇹🇬
-◇ *Rang XP🔰*: {data.r13}
-◇ *Golds🧭*: {data.r14}🧭
-◇ *NEOcoins🔹*: {data.r15}🔷
-◇ *Gift Box🎁*: {data.r16}🎁
-◇ *Coupons🎟️*: {data.r17}🎟️
-◇ *NEO PASS🔸*: {data.r18}🔸
+◇ *Rang XP🔰*: ${data.r13}
+◇ *Golds🧭*: ${data.r14}🧭
+◇ *NEOcoins🔹*: ${data.r15}🔷
+◇ *Gift Box🎁*: ${data.r16}🎁
+◇ *Coupons🎟️*: ${data.r17}🎟️
+◇ *NEO PASS🔸*: ${data.r18}🔸
 ░░░░░░░░░░░░░░
 *Note*: ⭐1/5
-*Records*: {data.r19} Victoires✅/ {data.r20}  Défaites❌
-*🏆Trophées*: {data.r21} *🌟TOS*: {data.r22} *💫Awards*: {data.r23}
+*Records*: ${data.r19} Victoires✅/ ${data.r20}  Défaites❌
+*🏆Trophées*: ${data.r21} *🌟TOS*: ${data.r22} *💫Awards*: ${data.r23}
 ▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
-*🎴Cards(15 max)*: {data.r24}
+*🎴Cards(15 max)*: ${data.r24}
 ░░░░░░░░░░░░░░░░░░░
 ▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
 
@@ -1066,7 +1066,7 @@ zokou(
     const { ms, repondre, arg, superUser } = commandeOptions;
 
     try {
-      const data = await getData();
+      const data = await getData7();
       let joueur = arg[1];
       let object = arg[3];
       let signe = arg[4];
@@ -1247,7 +1247,7 @@ zokou(
     const { ms, repondre, arg, superUser } = commandeOptions;
 
     try {
-      const data = await getData();
+      const data = await getData8();
       let joueur = arg[1];
       let object = arg[3];
       let signe = arg[4];
@@ -1411,7 +1411,7 @@ zokou(
     const { ms, repondre, arg, superUser } = commandeOptions;
 
     try {
-      const data = await getData();
+      const data = await getData9();
       let joueur = arg[1];
       let object = arg[3];
       let signe = arg[4];
@@ -1419,7 +1419,57 @@ zokou(
       let texte = arg.slice(5).join(' ');
 
      if (!arg || arg.length === 0) {
-        let mesg = ``;
+        let mesg = `.*𝗪𝗘𝗦𝗧 𝗗𝗜𝗩𝗜𝗦𝗜𝗢𝗡🦁🔵*
+░░░░░░░░░░░░░░░░░░░
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+◇ *Pseudo👤*: 
+◇ *Rang XP🔰*: Joueur Classé🎮
+◇ *Golds🧭*: 50.000🧭
+◇ *NEOcoins🔹*: 0🔷
+◇ *Gift Box🎁*: 0🎁
+◇ *Coupons🎟️*: 0🎟️
+◇ *NEO PASS🔸*: 0🔸
+░░░░░░░░░░░░░░
+*Note*: ⭐1/5
+*Records*: 0 Victoires✅/ 0 Défaites❌
+*🏆Trophées*: 0     *🌟TOS*: 0     *💫Awards*: 0
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+*🎴Cards(15 max)*: 
+░░░░░░░░░░░░░░░░░░░
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+
+◇ *Pseudo👤*: 
+◇ *Rang XP🔰*: Joueur Classé🎮
+◇ *Golds🧭*: 50.000🧭
+◇ *NEOcoins🔹*: 0🔷
+◇ *Gift Box🎁*: 0🎁
+◇ *Coupons🎟️*: 0🎟️
+◇ *NEO PASS🔸*: 0🔸
+░░░░░░░░░░░░░░
+*Note*: ⭐1/5
+*Records*: 0 Victoires✅/ 0 Défaites❌
+*🏆Trophées*: 0     *🌟TOS*: 0     *💫Awards*: 0
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+*🎴Cards(15 max)*: 
+░░░░░░░░░░░░░░░░░░░
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+
+◇ *Pseudo👤*: 
+◇ *Rang XP🔰*: Joueur Classé🎮
+◇ *Golds🧭*: 50.000🧭
+◇ *NEOcoins🔹*: 0🔷
+◇ *Gift Box🎁*: 0🎁
+◇ *Coupons🎟️*: 0🎟️
+◇ *NEO PASS🔸*: 0🔸
+░░░░░░░░░░░░░░
+*Note*: ⭐1/5
+*Records*: 0 Victoires✅/ 0 Défaites❌
+*🏆Trophées*: 0     *🌟TOS*: 0     *💫Awards*: 0
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+*🎴Cards(15 max)*: 
+░░░░░░░░░░░░░░░░░░░
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+        *🔷𝗡Ξ𝗢24🏆🔝*`;
           zk.sendMessage(dest, { image: { url: 'https://i.imgur.com/crAlkxv.jpg' }, caption: mesg }, { quoted: ms });
       } else {
         if (superUser) { 
@@ -1488,7 +1538,7 @@ zokou(
     const { ms, repondre, arg, superUser } = commandeOptions;
 
     try {
-      const data = await getData();
+      const data = await getData10();
       let joueur = arg[1];
       let object = arg[3];
       let signe = arg[4];
@@ -1667,7 +1717,7 @@ zokou(
     const { ms, repondre, arg, superUser } = commandeOptions;
 
     try {
-      const data = await getData();
+      const data = await getData11();
       let joueur = arg[1];
       let object = arg[3];
       let signe = arg[4];
@@ -1846,7 +1896,7 @@ zokou(
     const { ms, repondre, arg, superUser } = commandeOptions;
 
     try {
-      const data = await getData();
+      const data = await getData12();
       let joueur = arg[1];
       let object = arg[3];
       let signe = arg[4];
