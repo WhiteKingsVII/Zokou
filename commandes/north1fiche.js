@@ -1990,7 +1990,7 @@ Records: 0 Victoires✅/ 0 Défaites❌
         cards: "r12",
       };
       break;
-    case "O'Neal":
+    case `O'Neal`:
       colonnesJoueur = {
         rang_xp: "r13",
         golds: "r14",
