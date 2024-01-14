@@ -26,7 +26,7 @@ zokou(
       let object = arg[3];
       let signe = arg[4];
       let valeur = arg[5];
-      let texte = arg.slice(4).join(' ');
+      let texte = arg.slice(5).join(' ');
 
       if (!arg || arg.length === 0) {
         let mesg = `.*𝗡𝗢𝗥𝗧𝗛 𝗗𝗜𝗩𝗜𝗦𝗜𝗢𝗡🐺🔴*
@@ -545,7 +545,7 @@ zokou(
 ◇ *Golds🧭*: ${data.r2}🧭
 ◇ *NEOcoins🔹*: ${data.r3}🔷
 ◇ *Gift Box🎁*: ${data.r4}🎁
-◇ *Coupons🎟️*: ${data r5}🎟️
+◇ *Coupons🎟️*: ${data.r5}🎟️
 ◇ *NEO PASS🔸*: ${data.r6}🔸
 ░░░░░░░░░░░░░░
 *Note*: ⭐1/5
