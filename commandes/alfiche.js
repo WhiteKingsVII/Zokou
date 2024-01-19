@@ -40,9 +40,9 @@ zokou(
 ◇ *Coupons🎟*: ${data.r5}🎟
 ◇ *NEO PASS🔸*: ${data.r6}🔸
 ░░░░░░░░░░░░░░
-Note: ⭐⭐⭐⭐⭐5.5/5
-Records: ${data.r7} Victoires✅/ ${data.r8} Défaites❌
-🏆Trophées: ${data.r9}     🌟TOS: ${data.r10}     💫Awards: ${data.r11}
+*Note*: ⭐⭐⭐⭐⭐5.5/5
+*Records*: ${data.r7} Victoires✅/ ${data.r8} Défaites❌
+*🏆Trophées*: ${data.r9}     *🌟TOS*: ${data.r10}     *💫Awards: ${data.r11}
 ▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
 *🎴Cards(15 max)*: ${data.r12}
 ░░░░░░░░░░░░░░░░░░░
@@ -56,9 +56,9 @@ Records: ${data.r7} Victoires✅/ ${data.r8} Défaites❌
 ◇ *Coupons🎟*: ${data.r17}🎟
 ◇ *NEO PASS🔸*: ${data.r18}🔸
 ░░░░░░░░░░░░░░
-Note: ⭐⭐⭐⭐⭐5.5/5
-Records: ${data.r19} Victoires✅/ ${data.r20} Défaites❌
-🏆Trophées: ${data.r21}     🌟TOS: ${data.r22}     💫Awards: ${data.r23}
+*Note*: ⭐⭐⭐⭐⭐5.5/5
+*Records*: ${data.r19} Victoires✅/ ${data.r20} Défaites❌
+*🏆Trophées*: ${data.r21}     *🌟TOS*: ${data.r22}     *💫Awards*: ${data.r23}
 ▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
 *🎴Cards(15 max)*: ${data.r24}
 ░░░░░░░░░░░░░░░░░░░
@@ -72,9 +72,9 @@ Records: ${data.r19} Victoires✅/ ${data.r20} Défaites❌
 ◇ *Coupons🎟*: 0🎟
 ◇ *NEO PASS🔸*: 0🔸
 ░░░░░░░░░░░░░░
-Note: ⭐1/5
-Records: 0 Victoires✅/ 0 Défaites❌
-🏆Trophées: 0     🌟TOS: 0     💫Awards: 0
+*Note*: ⭐1/5
+*Records*: 0 Victoires✅/ 0 Défaites❌
+*🏆Trophées*: 0     *🌟TOS*: 0     *💫Awards*: 0
 ▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
 *🎴Cards(15 max)*: 
 ░░░░░░░░░░░░░░░░░░░
@@ -204,9 +204,9 @@ zokou(
 ◇ *Coupons🎟*: ${data.r5}🎟
 ◇ *NEO PASS🔸*: ${data.r6}🔸
 ░░░░░░░░░░░░░░
-Note: ⭐⭐⭐3/5
-Records: ${data.r7} Victoires✅/ ${data.r8} Défaites❌
-🏆Trophées: ${data.r9}     🌟TOS: ${data.r10}     💫Awards: ${data.r11}
+*Note*: ⭐⭐⭐3/5
+*Records*: ${data.r7} Victoires✅/ ${data.r8} Défaites❌
+*🏆Trophées*: ${data.r9}     *🌟TOS*: ${data.r10}     *💫Awards*: ${data.r11}
 ▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
 *🎴Cards(15 max)*: ${data.r12}
 ░░░░░░░░░░░░░░░░░░░
@@ -220,9 +220,9 @@ Records: ${data.r7} Victoires✅/ ${data.r8} Défaites❌
 ◇ *Coupons🎟*: ${data.r17}🎟
 ◇ *NEO PASS🔸*: ${data.r18}🔸
 ░░░░░░░░░░░░░░
-Note: ⭐1/5
-Records: ${data.r19} Victoires✅/ ${data.r20} Défaites❌
-🏆Trophées: ${data.r21}     🌟TOS: ${data.r22}     💫Awards: ${data.r23}
+*Note*: ⭐1/5
+*Records*: ${data.r19} Victoires✅/ ${data.r20} Défaites❌
+*🏆Trophées*: ${data.r21}     *🌟TOS*: ${data.r22}     *💫Awards*: ${data.r23}
 ▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
 *🎴Cards(15 max)*: ${data.r24}
 ░░░░░░░░░░░░░░░░░░░
@@ -236,9 +236,9 @@ Records: ${data.r19} Victoires✅/ ${data.r20} Défaites❌
 ◇ *Coupons🎟*: ${data.r29}🎟
 ◇ *NEO PASS🔸*: ${data.r30}🔸
 ░░░░░░░░░░░░░░
-Note: ⭐⭐2/5
-Records: ${data.r31} Victoires✅/ ${data.r32} Défaites❌
-🏆Trophées: ${data.r33}     🌟TOS: ${data.r34}     💫Awards: ${data.r35}
+*Note*: ⭐⭐2/5
+*Records*: ${data.r31} Victoires✅/ ${data.r32} Défaites❌
+*🏆Trophées*: ${data.r33}     *🌟TOS*: ${data.r34}     *💫Awards*: ${data.r35}
 ▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
 *🎴Cards(15 max)*: ${data.r36}
 ░░░░░░░░░░░░░░░░░░░
@@ -1248,9 +1248,9 @@ zokou(
 ◇ *Coupons🎟*: ${data.r5}🎟
 ◇ *NEO PASS🔸*: ${data.r6}🔸
 ░░░░░░░░░░░░░░
-Note: ⭐1/5
-Records: ${data.r7} Victoires✅/ ${data.r8} Défaites❌
-🏆Trophées: ${data.r9}     🌟TOS: ${data.r10}     💫Awards: ${data.r11}
+*Note*: ⭐1/5
+*Records*: ${data.r7} Victoires✅/ ${data.r8} Défaites❌
+*🏆Trophées*: ${data.r9}     *🌟TOS*: ${data.r10}     *💫Awards*: ${data.r11}
 ▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
 *🎴Cards(15 max)*: ${data.r12}
 ░░░░░░░░░░░░░░░░░░░
@@ -1264,27 +1264,27 @@ Records: ${data.r7} Victoires✅/ ${data.r8} Défaites❌
 ◇ *Coupons🎟*: ${data.r17}🎟
 ◇ *NEO PASS🔸*: ${data.r18}🔸
 ░░░░░░░░░░░░░░
-Note: ⭐1/5
-Records: ${data.r19} Victoires✅/ ${data.r20} Défaites❌
-🏆Trophées: ${data.r21}     🌟TOS: ${data.r22}     💫Awards: ${data.r23}
+*Note*: ⭐1/5
+*Records*: ${data.r19} Victoires✅/ ${data.r20} Défaites❌
+*🏆Trophées*: ${data.r21}     *🌟TOS*: ${data.r22}     *💫Awards*: ${data.r23}
 ▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
 *🎴Cards(15 max)*: ${data.r24}
 ░░░░░░░░░░░░░░░░░░░
 ▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
 
-◇ *Pseudo👤*: 
-◇ *Rang XP🔰*: Joueur Classé🎮
-◇ *Golds🧭*: 50.000🧭
-◇ *NEOcoins🔹*: 0🔷
-◇ *Gift Box🎁*: 0🎁
-◇ *Coupons🎟*: 0🎟
-◇ *NEO PASS🔸*: 0🔸
+◇ *Pseudo👤*: Nash ASTRAL🇨🇲
+◇ *Rang XP🔰*: ${data.r25}
+◇ *Golds🧭*: ${data.r26}🧭
+◇ *NEOcoins🔹*: ${data.r27}🔷
+◇ *Gift Box🎁*: ${data.r28}🎁
+◇ *Coupons🎟*: ${data.r29}🎟
+◇ *NEO PASS🔸*: ${data.r30}🔸
 ░░░░░░░░░░░░░░
-Note: ⭐1/5
-Records: 0 Victoires✅/ 0 Défaites❌
-🏆Trophées: 0     🌟TOS: 0     💫Awards: 0
+*Note*: ⭐1/5
+*Records*: ${data.r31} Victoires✅/ ${data.r32} Défaites❌
+*🏆Trophées*: ${data.r33}     *🌟TOS*: ${data.r34}     *💫Awards*: ${data.r35}
 ▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
-*🎴Cards(15 max)*: 
+*🎴Cards(15 max)*: ${data.r36} 
 ░░░░░░░░░░░░░░░░░░░
 ▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
          *🔷𝗡Ξ𝗢24🏆🔝*`;
@@ -1339,6 +1339,22 @@ Records: 0 Victoires✅/ 0 Défaites❌
         cards: "r24",
       };
       break;
+    case "Nash":
+      colonnesJoueur = {
+        rang_xp: "r25",
+        golds: "r26",
+        neocoins: "r27",
+        gift_box: "r28",
+        coupons: "r29",
+        neo_pass: "r30",
+        victoires: "r31",
+        defaites: "r32",
+        trophees: "r33",
+        tos: "r34",
+        awards: "r35",
+        cards: "r36",
+      };
+      break;         
     default:
       console.log("Nom de joueur non reconnu.");
               repondre(`joueur: ${joueur} non reconnu`);
@@ -1539,9 +1555,9 @@ zokou(
 ◇ *Coupons🎟*: ${data.r5}🎟
 ◇ *NEO PASS🔸*: ${data.r6}🔸
 ░░░░░░░░░░░░░░
-Note: ⭐⭐⭐⭐4/5
-Records: ${data.r7} Victoires✅/ ${data.r8} Défaites❌
-🏆Trophées: ${data.r9}     🌟TOS: ${data.r10}     💫Awards: ${data.r11}
+*Note*: ⭐⭐⭐⭐4/5
+*Records*: ${data.r7} Victoires✅/ ${data.r8} Défaites❌
+*🏆Trophées*: ${data.r9}     *🌟TOS*: ${data.r10}     *💫Awards*: ${data.r11}
 ▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
 *🎴Cards(15 max)*: ${data.r12}
 ░░░░░░░░░░░░░░░░░░░
@@ -1555,9 +1571,9 @@ Records: ${data.r7} Victoires✅/ ${data.r8} Défaites❌
 ◇ *Coupons🎟*: ${data.r17}🎟
 ◇ *NEO PASS🔸*: ${data.r18}🔸
 ░░░░░░░░░░░░░░
-Note: ⭐⭐⭐3/5
-Records: ${data.r19} Victoires✅/ ${data.r20} Défaites❌
-🏆Trophées: ${data.r21}     🌟TOS: ${data.r22}     💫Awards: ${data.r23}
+*Note*: ⭐⭐⭐3/5
+*Records*: ${data.r19} Victoires✅/ ${data.r20} Défaites❌
+*🏆Trophées*: ${data.r21}     *🌟TOS*: ${data.r22}     *💫Awards*: ${data.r23}
 ▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
 *🎴Cards(15 max)*: ${data.r24}
 ░░░░░░░░░░░░░░░░░░░
@@ -1571,9 +1587,9 @@ Records: ${data.r19} Victoires✅/ ${data.r20} Défaites❌
 ◇ *Coupons🎟*: ${data.r29}🎟
 ◇ *NEO PASS🔸*: ${data.r30}🔸
 ░░░░░░░░░░░░░░
-Note: ⭐1/5
-Records: ${data.r31} Victoires✅/ ${data.r32} Défaites❌
-🏆Trophées: ${data.r33}     🌟TOS: ${data.r34}     💫Awards: ${data.r35}
+*Note*: ⭐1/5
+*Records*: ${data.r31} Victoires✅/ ${data.r32} Défaites❌
+*🏆Trophées*: ${data.r33}     *🌟TOS*: ${data.r34}     *💫Awards*: ${data.r35}
 ▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
 *🎴Cards(15 max)*: ${data.r36}
 ░░░░░░░░░░░░░░░░░░░
@@ -1718,9 +1734,9 @@ zokou(
 ◇ *Coupons🎟*: ${data.r5}🎟
 ◇ *NEO PASS🔸*: ${data.r6}🔸
 ░░░░░░░░░░░░░░
-Note: ⭐⭐2/5
-Records: ${data.r7} Victoires✅/ ${data.r8} Défaites❌
-🏆Trophées: ${data.r9}     🌟TOS: ${data.r10}     💫Awards: ${data.r11}
+*Note*: ⭐⭐2/5
+*Records*: ${data.r7} Victoires✅/ ${data.r8} Défaites❌
+*🏆Trophées*: ${data.r9}     *🌟TOS*: ${data.r10}     *💫Awards*: ${data.r11}
 ▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
 *🎴Cards(15 max)*: ${data.r12}
 ░░░░░░░░░░░░░░░░░░░
@@ -1734,9 +1750,9 @@ Records: ${data.r7} Victoires✅/ ${data.r8} Défaites❌
 ◇ *Coupons🎟*: ${data.r17}🎟
 ◇ *NEO PASS🔸*: ${data.r18}🔸
 ░░░░░░░░░░░░░░
-Note: ⭐⭐2/5
-Records: ${data.r19} Victoires✅/ ${data.r20} Défaites❌
-🏆Trophées: ${data.r21}     🌟TOS: ${data.r22}     💫Awards: ${data.r23}
+*Note*: ⭐⭐2/5
+*Records*: ${data.r19} Victoires✅/ ${data.r20} Défaites❌
+*🏆Trophées*: ${data.r21}     *🌟TOS*: ${data.r22}     *💫Awards*: ${data.r23}
 ▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
 *🎴Cards(15 max)*: ${data.r24}
 ░░░░░░░░░░░░░░░░░░░
@@ -1750,9 +1766,9 @@ Records: ${data.r19} Victoires✅/ ${data.r20} Défaites❌
 ◇ *Coupons🎟*: ${data.r29}🎟
 ◇ *NEO PASS🔸*: ${data.r30}🔸
 ░░░░░░░░░░░░░░
-Note: ⭐1/5
-Records: ${data.r31} Victoires✅/ ${data.r32} Défaites❌
-🏆Trophées: ${data.r33}     🌟TOS: ${data.r34}     💫Awards: ${data.r35}
+*Note*: ⭐1/5
+*Records*: ${data.r31} Victoires✅/ ${data.r32} Défaites❌
+*🏆Trophées*: ${data.r33}     *🌟TOS*: ${data.r34}     *💫Awards*: ${data.r35}
 ▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
 *🎴Cards(15 max)*: ${data.r36}
 ░░░░░░░░░░░░░░░░░░░
@@ -1897,9 +1913,9 @@ zokou(
 ◇ *Coupons🎟*: ${data.r5}🎟
 ◇ *NEO PASS🔸*: ${data.r6}🔸
 ░░░░░░░░░░░░░░
-Note: ⭐1/5
-Records: ${data.r7} Victoires✅/ ${data.r8} Défaites❌
-🏆Trophées: ${data.r9}     🌟TOS: ${data.r10}     💫Awards: ${data.r11}
+*Note*: ⭐1/5
+*Records*: ${data.r7} Victoires✅/ ${data.r8} Défaites❌
+*🏆Trophées*: ${data.r9}     *🌟TOS*: ${data.r10}     *💫Awards*: ${data.r11}
 ▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
 *🎴Cards(15 max)*: ${data.r12}
 ░░░░░░░░░░░░░░░░░░░
@@ -1913,9 +1929,9 @@ Records: ${data.r7} Victoires✅/ ${data.r8} Défaites❌
 ◇ *Coupons🎟*: ${data.r17}🎟
 ◇ *NEO PASS🔸*: ${data.r18}🔸
 ░░░░░░░░░░░░░░
-Note: ⭐1/5
-Records: ${data.r19} Victoires✅/ ${data.r20} Défaites❌
-🏆Trophées: ${data.r21}     🌟TOS: ${data.r22}     💫Awards: ${data.r23}
+*Note*: ⭐1/5
+*Records*: ${data.r19} Victoires✅/ ${data.r20} Défaites❌
+*🏆Trophées*: ${data.r21}     *🌟TOS*: ${data.r22}     *💫Awards*: ${data.r23}
 ▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
 *🎴Cards(15 max)*: ${data.r24}
 ░░░░░░░░░░░░░░░░░░░
@@ -1929,9 +1945,9 @@ Records: ${data.r19} Victoires✅/ ${data.r20} Défaites❌
 ◇ *Coupons🎟*: 0🎟
 ◇ *NEO PASS🔸*: 0🔸
 ░░░░░░░░░░░░░░
-Note: ⭐1/5
-Records: 0 Victoires✅/ 0 Défaites❌
-🏆Trophées: 0     🌟TOS: 0     💫Awards: 0
+*Note*: ⭐1/5
+*Records*: 0 Victoires✅/ 0 Défaites❌
+*🏆Trophées*: 0     *🌟TOS*: 0     *💫Awards*: 0
 ▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
 *🎴Cards(15 max)*: 
 ░░░░░░░░░░░░░░░░░░░
